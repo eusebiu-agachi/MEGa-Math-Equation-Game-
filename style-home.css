@@ -253,3 +253,59 @@ section .set div:nth-child(9)
 ::placeholder {
     color: black;
 }
+.logo {
+	position: absolute;
+	margin-top: 7%;
+	margin-left: 3%;
+}
+.logo img{
+	max-width: 500px;
+}
+
+.textbox{
+	position: absolute;
+	margin-top: 15%;
+	margin-left: 23%;
+	padding: 5px;
+}
+.textbox p{
+	padding: 10px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 40px;
+}
+.textbox .login{
+	float: right;
+	padding: 15px 32px;
+	outline: none;
+	border: 2px solid #248D22;
+	background: none;
+	text-decoration: none;
+	color:black;
+	border-radius: 20px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 4px 2px;
+}
+
+.login:hover{
+	background-color:#248D22;
+	color:white;
+}
+.textbox .register{
+	float: right;
+	padding: 15px 32px;
+	outline: none;
+	border: 2px solid red;
+	background:none;
+	text-decoration: none;
+	color:black;
+	border-radius: 20px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 4px 2px;
+}
+
+.textbox .register:hover{
+	background-color: red;
+	color: white;
+}
