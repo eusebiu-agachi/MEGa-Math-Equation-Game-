@@ -11,9 +11,15 @@ function type(){
 }
 type();
 
-document.getElementById("btn-register").addEventListener("click", function(){
-	document.querySelector(".popup-register").style.display="flex";
-	document.querySelector(".navbar").style.display="none";
+document.getElementById("btn-login").addEventListener("click", function(){
+	document.querySelector(".popup").style.display = "flex";
+	document.querySelector(".navbar").style.display = "none";
+})
+
+document.querySelector(".close").addEventListener("click", function(){
+	document.querySelector(".popup").style.display ="none";
+	document.querySelector(".popup-register").style.display ="none";
+	document.querySelector(".navbar").style.display = "flex";
 })
 
 document.querySelector(".close-register").addEventListener("click", function(){
@@ -23,4 +29,12 @@ document.querySelector(".close-register").addEventListener("click", function(){
 document.getElementById("left-register").addEventListener("click", function(){
 	document.querySelector(".popup-register").style.display="flex";
 	document.querySelector(".popup").style.display="none";
+})
+document.getElementById("left-login").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "flex";
+    document.querySelector(".popup-register").style.display="none";
+})
+document.getElementById("btn-register").addEventListener("click", function(){
+	document.querySelector(".popup-register").style.display="flex";
+	document.querySelector(".navbar").style.display="none";
 })
