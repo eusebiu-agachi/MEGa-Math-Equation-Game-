@@ -223,7 +223,9 @@ section .set div:nth-child(9)
     .logo img {
         max-width: 500px;
     }
-
+.search{
+	float: right;
+}
 .search button {
     float: right;
     padding: 6px 10px;
