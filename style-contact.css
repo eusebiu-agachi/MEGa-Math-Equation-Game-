@@ -191,6 +191,31 @@ ul {
     width: 30%;
 }
 
+.container .logo {
+    position: absolute;
+    margin-top: -35px;
+}
+
+    .container .logo img {
+        width: 350px;
+        height: 125px;
+    }
+
+.svg-up svg {
+    position: relative;
+    margin-top: 1%;
+    left: 12%;
+    width: 1000px;
+}
+
+.svg-down svg {
+    position: absolute;
+    float: right;
+    margin-right: 20%;
+    margin-left: 56.5%;
+    margin-top: -25%;
+}
+
 #message {
     height: 150px;
 }
