@@ -306,9 +306,10 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
 
 .popup {
     height: 61%;
-    width: 51%;
-    top: 22%;
+    width: 100%;
     position: absolute;
+    top:22%;
+    left: 0;
     display: none;
     justify-content: center;
     align-items: center;
@@ -520,21 +521,18 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     animation: animatezoom 0.3s
 }
 
-.introduce {
+.text-log {
     width: 300px;
     height: 100px;
-    display: table;
     position: absolute;
-    margin-top: 20%;
+    margin-top: 12%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 30px;
+    color: white;
 }
 
-    .introduce p {
-        text-align: center;
-        vertical-align: middle;
-        display: table-cell;
-        font-size: 30px;
-        color: white;
-    }
 
 .register-left {
     background: none;
@@ -607,3 +605,96 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
         background-color: green;
         color: white;
     }
+
+
+    @media screen and ( max-width: 1270px)
+    {    
+        .text-log {
+            
+            top: 20%;
+        }
+        .logo-img-math{
+            display: none;
+        }
+    }
+    @media screen and ( max-width: 920px)
+    {    
+        
+        .text-log {
+            
+            top: 30%;
+
+        }       
+    }
+    @media screen and ( max-width: 600px)
+    {   
+        .popup{
+            position: absolute;
+            top: 0;
+        }
+        .login-left{
+            width:60%;
+        } 
+        .login-right{
+            position:absolute;
+            transform:translate(0%,100%);
+            width: 60%;
+            height: 75%;
+        } 
+        .logo-img-math{
+            display: none;
+        } 
+        .text-log {
+            margin-left: 14px;
+            top: 33%;
+        }   
+    }
+    @media screen and ( max-width: 520px){
+        .login-left{
+            width:70%;
+        }
+        .login-right{
+            width:70%;
+        }
+
+    }
+    @media screen and ( max-width: 440px){
+        .login-left{
+            width:80%;
+        }
+        .login-right{
+            width:80%;
+        }
+        .text-log{
+            top: 35%;
+        }
+    }
+    @media screen and ( max-width: 400px){
+        .login-left{
+            width: 100%;
+        }
+        .welcome{
+            margin-left: 20px;
+        }
+        .login-right{
+            width: 100%;
+        }
+        .log-login{
+            margin-left: 20px;
+        }
+        .text-log{
+            margin-top: 25%;
+            margin-left: 50px;
+        }
+    }
+    @media screen and ( max-width: 360px){
+        .text-log{
+            margin-left: 20px;
+        }
+    }
+    @media screen and ( max-width: 320px){
+        .text-log{
+            margin-left: 10px;
+        }
+    }
+   
