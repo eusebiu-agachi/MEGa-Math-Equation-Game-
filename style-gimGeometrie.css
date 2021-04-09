@@ -389,7 +389,7 @@ body {
     }
 }
 
-@media screen and (max-width:420) {
+@media screen and (max-width:420px) {
     .container .meniu .logo h1 {
         display: none;
     }
