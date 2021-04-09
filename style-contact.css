@@ -197,12 +197,12 @@ ul{
     width: 1000px;
 }
 
-.svg-down svg{
-    position: absolute;
-    float:right;
-    margin-right:15%;
-    margin-left:56.5%;
-    margin-top:-18%;
+.svg-down svg {
+    position: relative;
+    float: right;
+    left: 21.25%;
+    width: 1000px;
+    margin-top: -23.20%;
 }
 #message{
     height:150px;
