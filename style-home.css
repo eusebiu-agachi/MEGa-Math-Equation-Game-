@@ -317,9 +317,10 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
 }
 
 .popup-register {
-    height: 61%;
-    width: 51%;
+    height:70%;
+    width: 100%;
     top: 22%;
+    left:0;
     position: absolute;
     display: none;
     justify-content: center;
@@ -360,7 +361,7 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     .popup-register .already-account {
         position: relative;
         left: 20px;
-        top: 80px;
+        top: 86px;
         font-size: 20px;
     }
 
@@ -410,9 +411,9 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
 }
 
 .close-register {
-    position: absolute;
-    top: 3px;
-    right: 4px;
+    position: relative;
+    top: -50px;
+    left:93%;
     max-width: 15px;
     max-height: 15px;
     border-radius: 5px;
@@ -536,7 +537,7 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
 
 .register-left {
     background: none;
-    width: 100%;
+    width: 25%;
     height: 100%;
     background: rgb(92,171,67);
     background: radial-gradient(circle, rgba(92,171,67,1) 0%, rgba(130,209,103,1) 0%, rgba(83,147,53,1) 88%, rgba(83,177,49,1) 97%, rgba(69,154,66,1) 100%);
@@ -544,9 +545,11 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     border-radius: 4px;
 }
 
+
+
 .register-right {
     background-color: white;
-    width: 100%;
+    width: 25%;
     height: 100%;
 }
 
@@ -597,7 +600,7 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     opacity: 0.9;
     border: 1px solid green;
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 100px;
 }
 
@@ -697,4 +700,119 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
             margin-left: 10px;
         }
     }
+
+    @media screen and ( max-width: 1460px){
+        .register-left{
+            width: 30%;
+            height: 90%;
+        }
+        .register-right{
+            width: 30%;
+            height: 90%;
+        }
+
+        .input-left{
+            margin-left: -40%;
+            margin-top: 200px;
+        }
+        
+}
+
+@media screen and ( max-width: 1200px){
+    .left-login{
+        position: relative;
+        margin-left: 50px;
+    
+        
+    }
+    .already-account{
+        margin-top: 30px;
+    }
+}
+@media screen and ( max-width: 1130px){
+    .input-left{
+        margin-left:-70%;
+        margin-top: 20%;
+    }
+    .register-right{
+        width: 40%;
+        
+    }
+}
+@media screen and ( max-width: 970px){
+    .register-left{
+        width: 40%;
+    }
+    .register-right{
+        width: 40%;
+    }
+}
+@media screen and ( max-width: 730px){
+    .popup-register{
+        position: absolute;
+        top: -17%;
+    }
+    .register-left{
+        
+        width:60%;
+        height: 50%;
+    } 
+    .register-right{
+        position:absolute;
+        transform:translate(0%,75%);
+        width: 60%;
+        height: 90%;
+    }
+    .input-left{
+        margin-left: -20%;
+    } 
+    .already-account{
+       margin-top: -15%;
+    }
+    .left-login{
+        margin-top: 5%;
+    }
+    .img-profil{
+        display: none;
+    }
+}
+@media screen and ( max-width: 500px) {
+    .register-left{
+        width: 80%;
+    }
+    .register-right{
+        width: 80%;
+    }
+}
+@media screen and ( max-width: 400px) {
+    .register-left{
+        width: 100%;
+    }
+    .register-right{
+        width: 100%;
+    }
+}
+
+@media screen and ( max-height: 704px)
+{
+   .popup-register{
+       top: 5%;
+       height: 90%;
+   }
+}
+@media screen and ( max-height: 705px){
+    .popup-register{
+        top: -40%;
+    }
+    .already-account{
+        display: none;
+    }
+    .register-left{
+        height: 30%;
+        transform: translateY(30%);
+    }
+}
+
+
+
    
