@@ -1,0 +1,446 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #b5e48c;
+}
+
+.container {
+    width: 100%;
+    height: 160%;
+    position: absolute;
+}
+
+    .container .logo {
+        position: absolute;
+        margin-top: -35px;
+    }
+
+        .container .logo img {
+            width: 350px;
+            height: 125px;
+        }
+
+
+    .container .topnav {
+        overflow: hidden;
+        margin-right: 5%;
+    }
+
+    .container .logo {
+        position: absolute;
+    }
+
+    .container .topnav a {
+        float: right;
+        color: black;
+        padding: 20px;
+        text-decoration: none;
+    }
+
+    .container .left {
+        margin-top: 25px;
+        position: absolute;
+    }
+
+        .container .left .algebra a {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 7px;
+            text-decoration: none;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container .left .analiza a {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 7px;
+            text-decoration: none;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container .left .trigonometrie a {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 7px;
+            text-decoration: none;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container .left .algebra {
+            border: 1px solid black;
+            border-radius: 0px 27px 27px 27px;
+            box-shadow: -1px -1px 17px 0px rgba(0,0,0,0.75);
+        }
+
+        .container .left .analiza {
+            border: 1px solid black;
+            border-radius: 0px 27px 27px 27px;
+            box-shadow: -1px -1px 17px 0px rgba(0,0,0,0.75);
+        }
+
+        .container .left .trigonometrie {
+            border: 1px solid black;
+            border-radius: 0px 27px 27px 27px;
+            box-shadow: -1px -1px 17px 0px rgba(0,0,0,0.75);
+        }
+
+        .container .left .algebra img {
+            max-width: 200px;
+            max-height: 200px;
+            margin-left: 20px;
+            padding: 10px;
+            padding-bottom: unset;
+        }
+
+        .container .left .trigonometrie img {
+            max-width: 200px;
+            max-height: 200px;
+            padding: 30px;
+        }
+
+        .container .left .analiza img {
+            max-width: 200px;
+            max-height: 150px;
+            padding: 30px
+        }
+
+    .container .right {
+        position: absolute;
+        left: 25%;
+        top: 10%;
+        width: 55%;
+        height: 85%;
+    }
+
+        .container .right .problem {
+            
+			position: relative;
+            width: 100%;
+            height: 25%;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+            .container .right .problem .title {
+                float: left;
+                padding: 10px;
+            }
+
+            .container .right .problem .id {
+                float: right;
+                padding: 10px;
+            }
+
+            .container .right .problem .hint {
+                position: absolute;
+                float: left;
+                bottom: 0px;
+                padding: 10px;
+            }
+
+                .container .right .problem .hint .btn-hint {
+                    outline: none;
+                    border: 1px solid green;
+                    border-radius: 3px;
+                    background: none;
+                    padding: 3px;
+                }
+
+            .container .right .problem .points {
+                position: absolute;
+                right: 0;
+                float: right;
+                bottom: 0px;
+                padding: 10px;
+            }
+
+            .container .right .problem .hint .btn-hint:hover {
+                background-color: green;
+                color: white;
+            }
+
+.fa-lightbulb-o {
+    color: red;
+}
+
+
+.container .right .problem .cerinta {
+    position: relative;
+    margin-left: 10%;
+    margin-top: 0;
+    padding: 20px;
+}
+
+.container .right .problem .cerinta p{
+	font-size:23px;
+	
+}
+
+.container .right .problem .raspuns {
+    position: relative;
+    top: 0px;
+    left: 300px;
+}
+
+    .container .right .problem .raspuns .btn-send {
+        background: none;
+        border: 0px;
+        outline: none;
+        cursor: pointer;
+        color: green;
+    }
+
+.container .right .problem .math {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 150px;
+}
+
+.right .problem .banner-color {
+    width: 100%;
+    height: 15%;
+    background-color: green;
+    color: white;
+}
+
+@media screen and (max-width: 1120px) {
+    .container .right .raspuns {
+        margin-left: -100px;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .meniu {
+        display: block;
+    }
+
+    .container .left .algebra {
+        float: left;
+        transform: translateX(0%);
+        width: 25%;
+        height: 140px;
+    }
+
+        .container .left .algebra img {
+            margin-top: 7px;
+            max-width: 55%;
+        }
+
+    .container .left .analiza {
+        float: left;
+        transform: translateX(50%);
+        width: 25%;
+        height: 140px;
+    }
+
+        .container .left .analiza img {
+            margin-top: -5px;
+            max-width: 45%;
+        }
+
+    .container .left .trigonometrie {
+        float: right;
+        transform: translateX(0%);
+        width: 25%;
+        height: 140px;
+    }
+
+        .container .left .trigonometrie img {
+            max-width: 60%;
+            
+        }
+
+    .container .right {
+        margin-top: 150px;
+    }
+
+        .container .right .raspuns {
+            margin-left: -25%;
+        }
+}
+
+@media screen and (max-width:890px) {
+    .container .right .problem {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .container .right {
+        margin-top: 150px;
+    }
+
+        .container .right .raspuns {
+            margin-left: -150px;
+            margin-top: -10px;
+        }
+
+        .container .right .problem {
+            height: 250px;
+        }
+}
+
+@media screen and (max-width: 730px) {
+    .container .meniu .logo {
+        position: absolute;
+        margin-top: -15px;
+    }
+
+        .container .meniu .logo img {
+            width: 200px;
+            height: 75px;
+        }
+
+    .container .right .raspuns {
+        margin-left: -170px;
+        margin-top: -15px;
+    }
+
+    .container .right .problem {
+        margin-left: -75px;
+        width: 450px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .container .right .raspuns {
+        margin-left: -180px;
+        margin-top: -15px;
+    }
+
+    .container .right .problem {
+        margin-left: -75px;
+        width: 450px;
+        height: 250px;
+    }
+}
+
+
+@media screen and (max-width: 570px) {
+
+    .container .meniu .logo {
+        position: absolute;
+        margin-top: -5px;
+    }
+
+        .container .meniu .logo img {
+            width: 125px;
+            height: 50px;
+        }
+
+    .container .left .algebra a {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .container .left .analiza a {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .container .left .trigonometrie a {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .container .left .analiza img {
+        max-width: 70%;
+        margin-left: -15px;
+        margin-top: 10px;
+    }
+
+    .container .left .algebra img {
+        max-width: 70%;
+        margin-left: -10px;
+        margin-top: 20px;
+    }
+
+    .container .left .trigonometrie img {
+        max-width: 70%;
+        margin-left: -5px;
+        margin-top: 20px;
+    }
+
+    .container .right .problem {
+        width: 350px;
+        height: 250px;
+    }
+
+    .container .right .raspuns {
+        margin-left: -200px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .container .meniu .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .container .meniu .logo h1 {
+        display: none;
+    }
+
+    .container .left .trigonometrie a {
+        margin-top: 10px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .container .meniu .logo h1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container .right .problem {
+        width: 250px;
+        height: 250px;
+        margin-left: -40px;
+    }
+
+    .container .right .raspuns {
+        margin-left: -270px;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container .meniu .topnav {
+        font-size: 12px;
+    }
+
+    .container .right {
+        margin-top: 150px;
+    }
+
+        .container .right .problem {
+            width: 250px;
+            height: 325px;
+        }
+
+        .container .right .raspuns {
+            margin-top: 5px;
+        }
+
+    .container .left .trigonometrie a {
+        margin-top: 10px;
+        font-size: 8px;
+    }
+}
+
