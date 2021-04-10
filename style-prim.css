@@ -5,6 +5,7 @@
 body{
     margin: 0;
     padding: 0;
+    background: #b5e48c;
 }
 
 .wave-section .wave{
@@ -32,7 +33,6 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-    background: radial-gradient(circle, rgba(141,246,107,1) 0%, rgba(224,240,109,1) 41%, rgba(156,231,120,1) 100%);
 }
 
 
@@ -59,11 +59,190 @@ body{
 }
 
 .container .timeline{
-    position: relative;
+    position: absolute;
     margin-top: 100px;
     width: 1000px;
     height: 500px;
 }
+@media screen and ( max-width: 1290px){
+    .left{
+        left: 0;
+        position: absolute;
+    }
+    .right{
+        position: relative;
+        bottom: -70%;
+    }
+    .wave{
+        display: none;
+    }
+}
+@media screen and ( max-width: 980px){
+    .left .timeline::before{
+        margin-left: -400px;
+    }
+    .timeline ul li:nth-child(odd)::before{
+        left:-3px;
+    }
+   
+    .timeline ul li:nth-child(odd) p{
+        position: relative;
+        left: -22%;
+    }
+    .left .timeline ul li:nth-child(odd){
+        float:right;
+        text-align: left;
+        clear: both;
+        color: black;
+        left: -400px;
+    }
+    .left .timeline ul li:nth-child(even){
+        float:right;
+        text-align: left;
+        clear: both;
+        color: black;
+        left: -400px;
+    }
+    .right{
+        position: relative;
+        bottom: -40%;
+    }
+    .wave{
+        display: none;
+    }
+    .timeline ul li .image{
+        left: 30%;
+    }
+    
+    .timeline ul li .image-final img{
+        left: 30%;
+        max-width: 80px;
+        max-height: 80px;
+        
+    }
+    .timeline ul li .image-two{
+        position: absolute;
+        left: 30%;
+        
+    }
+ }
+ @media screen and ( max-width: 830px){
+    .logo {
+        display: none;
+    }
+ }
+ @media screen and ( max-width: 782px){
+    .left .timeline::before{
+        margin-left: -380px;
+    }
+    .left .timeline ul li:nth-child(odd){
+        float:right;
+        text-align: left;
+        clear: both;
+        color: black;
+        left: -380px;
+    }
+    .left .timeline ul li:nth-child(even){
+        float:right;
+        text-align: left;
+        clear: both;
+        color: black;
+        left: -380px;
+    }
+    
+    .timeline ul li:nth-child(odd) .image{
+        left: 30%;
+        max-width: 80px;
+        max-height: 80px;
+               
+    }
+    .timeline ul li .image-two{
+        position: absolute;
+        left: 30%
+    }
+    .timeline ul li .image-final img{
+        left: 22%;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    .right{
+        position: relative;
+        bottom: -85%;
+        left: -30%;
+    }
+   
+}
+@media screen and ( max-width: 550px){
+    .left .timeline::before{
+        margin-left: -480px;
+    }
+    .left .timeline ul li:nth-child(odd){
+        float:right;
+        text-align: left;
+        clear: both;
+        color: black;
+        left: -480px;
+    }
+    .left .timeline ul li:nth-child(even){
+        float:right;
+        text-align: left;
+        clear: both;
+        color: black;
+        left: -480px;
+    }
+    
+    .timeline ul li:nth-child(odd) .image{
+        left: 30%;
+        max-width: 80px;
+        max-height: 80px;
+               
+    }
+    .timeline ul li .image-two{
+        position: absolute;
+        left: 30%
+    }
+    .timeline ul li .image-final img{
+        left: 22%;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    .right{
+        position: relative;
+        bottom: -85%;
+        left: -30%;
+    }
+}
+@media screen and ( max-width: 500px){
+    .right{
+        left: -15%;
+    }
+}
+@media screen and ( max-width: 400px){
+    .left .timeline::before{
+        height:100%;
+        margin-top: 17px;
+    }
+   .left .timeline ul li .content{
+       position: relative;
+   }
+   .left .timeline ul li .content p{
+       position: relative;
+       width:260px;
+   }
+   .right{
+    position: relative;
+    bottom: -90%;
+    left:-3%;
+    }
+}
+@media screen and ( max-height: 670px){
+    .right{
+        position: relative;
+        bottom: -103%;
+        left:-3%;
+    }
+}
+
 
 .timeline:before{
     content:'';
@@ -103,6 +282,10 @@ body{
 .content{
     padding-bottom: 20px;
 }
+.content p{
+    max-width: 80%;
+    position: relative;
+}
 
 .timeline ul li:nth-child(odd):before{
     content: '';
@@ -131,13 +314,17 @@ body{
 }
 
 .timeline ul li p{
+    position: relative;
     margin: 10px 0 0;
     padding: 0;
+}
+.timeline ul li:nth-child(odd) p{
+    margin-left: 90px;
 }
 
 .timeline ul li:nth-child(odd) .image{
     position: absolute;
-    top: 0;
+    top: -100px;
     right: -200px;
     margin: 0;
     padding: 8px 16px;
@@ -145,21 +332,21 @@ body{
 
 
 }
-.timeline ul li:nth-child(even) .image{
+.timeline ul .image-two{
     position: absolute;
-    top: 12px;
+    top: -30px;
     left: -140px;
     max-height: 10px;
     max-width: 10px;
     margin: 0;
     width: 100px;
-    height: 100px;
+    height: 50px;
     padding: 8px 16px;
 }
 
 .timeline ul li .image-final img{
     position: absolute;
-    top: 0;
+    top: -50px;
     right: -160px;
     margin: 0;
     padding: 8px 16px;
@@ -168,7 +355,7 @@ body{
     height: 130px;
 
 }
-.timeline ul li:nth-child(even) .image img{
+.timeline ul li:nth-child(even) .image-two img{
     max-height: 80px;
     max-width: 90px;
 
