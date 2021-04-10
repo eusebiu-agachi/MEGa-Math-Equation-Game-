@@ -450,7 +450,6 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     outline: none;
     color: black;
     text-align: center;
-    transition-property: width left;
     transition-duration: 0.5s;
 }
 
