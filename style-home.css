@@ -308,7 +308,7 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     height: 61%;
     width: 100%;
     position: absolute;
-    top:22%;
+    top: 22%;
     left: 0;
     display: none;
     justify-content: center;
@@ -317,10 +317,9 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
 }
 
 .popup-register {
-    height:70%;
-    width: 100%;
+    height: 61%;
+    width: 51%;
     top: 22%;
-    left:0;
     position: absolute;
     display: none;
     justify-content: center;
@@ -361,7 +360,7 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     .popup-register .already-account {
         position: relative;
         left: 20px;
-        top: 86px;
+        top: 80px;
         font-size: 20px;
     }
 
@@ -411,9 +410,9 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
 }
 
 .close-register {
-    position: relative;
-    top: -50px;
-    left:93%;
+    position: absolute;
+    top: 3px;
+    right: 4px;
     max-width: 15px;
     max-height: 15px;
     border-radius: 5px;
@@ -537,7 +536,7 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
 
 .register-left {
     background: none;
-    width: 25%;
+    width: 100%;
     height: 100%;
     background: rgb(92,171,67);
     background: radial-gradient(circle, rgba(92,171,67,1) 0%, rgba(130,209,103,1) 0%, rgba(83,147,53,1) 88%, rgba(83,177,49,1) 97%, rgba(69,154,66,1) 100%);
@@ -545,11 +544,9 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     border-radius: 4px;
 }
 
-
-
 .register-right {
     background-color: white;
-    width: 25%;
+    width: 100%;
     height: 100%;
 }
 
@@ -600,7 +597,7 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     opacity: 0.9;
     border: 1px solid green;
     border-radius: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 100px;
 }
 
@@ -610,209 +607,348 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     }
 
 
-    @media screen and ( max-width: 1270px)
-    {    
-        .text-log {
-            
-            top: 20%;
-        }
-        .logo-img-math{
-            display: none;
-        }
-    }
-    @media screen and ( max-width: 920px)
-    {    
-        
-        .text-log {
-            
-            top: 30%;
-
-        }       
-    }
-    @media screen and ( max-width: 600px)
-    {   
-        .popup{
-            position: absolute;
-            top: 0;
-        }
-        .login-left{
-            width:60%;
-        } 
-        .login-right{
-            position:absolute;
-            transform:translate(0%,100%);
-            width: 60%;
-            height: 75%;
-        } 
-        .logo-img-math{
-            display: none;
-        } 
-        .text-log {
-            margin-left: 14px;
-            top: 33%;
-        }   
-    }
-    @media screen and ( max-width: 520px){
-        .login-left{
-            width:70%;
-        }
-        .login-right{
-            width:70%;
-        }
-
-    }
-    @media screen and ( max-width: 440px){
-        .login-left{
-            width:80%;
-        }
-        .login-right{
-            width:80%;
-        }
-        .text-log{
-            top: 35%;
-        }
-    }
-    @media screen and ( max-width: 400px){
-        .login-left{
-            width: 100%;
-        }
-        .welcome{
-            margin-left: 20px;
-        }
-        .login-right{
-            width: 100%;
-        }
-        .log-login{
-            margin-left: 20px;
-        }
-        .text-log{
-            margin-top: 25%;
-            margin-left: 50px;
-        }
-    }
-    @media screen and ( max-width: 360px){
-        .text-log{
-            margin-left: 20px;
-        }
-    }
-    @media screen and ( max-width: 320px){
-        .text-log{
-            margin-left: 10px;
-        }
+@media screen and (max-width: 1480px) {
+    .container .meniu .search {
+        width: 200px;
     }
 
-    @media screen and ( max-width: 1460px){
-        .register-left{
-            width: 30%;
-            height: 90%;
-        }
-        .register-right{
-            width: 30%;
-            height: 90%;
+        .container .meniu .search input {
+            width: 160px;
+            margin-left: -1px;
         }
 
-        .input-left{
-            margin-left: -40%;
-            margin-top: 200px;
+        .container .meniu .search button {
+            width: 30px;
+            margin-right: 10px;
         }
-        
 }
 
-@media screen and ( max-width: 1200px){
-    .left-login{
-        position: relative;
-        margin-left: 50px;
-    
-        
+
+@media screen and ( max-width: 1270px) {
+    .text-log {
+        top: 20%;
     }
-    .already-account{
-        margin-top: 30px;
-    }
-}
-@media screen and ( max-width: 1130px){
-    .input-left{
-        margin-left:-70%;
-        margin-top: 20%;
-    }
-    .register-right{
-        width: 40%;
-        
+
+    .container .center .logo-img-math img {
+        width: 600px;
+        margin-top: 50px;
     }
 }
-@media screen and ( max-width: 970px){
-    .register-left{
-        width: 40%;
+
+@media screen and (max-width: 1210px) {
+    .container .center .meniu .textbox {
+        margin-left: 10%;
     }
-    .register-right{
-        width: 40%;
+
+    .container .center .meniu .logo img {
+        display: none;
     }
 }
-@media screen and ( max-width: 730px){
-    .popup-register{
+
+@media screen and (max-width: 1115px) {
+    .container .meniu .search {
+        width: 150px;
+    }
+
+        .container .meniu .search input {
+            width: 120px;
+            margin-left: -1px;
+        }
+
+        .container .meniu .search button {
+            width: 15px;
+        }
+
+    .container .center .meniu .navbar {
+        height: 50px;
+    }
+
+        .container .center .meniu .navbar a {
+            font-size: 15px;
+        }
+
+        .container .center .meniu .navbar .dropdown .dropbtn {
+            font-size: 15px;
+        }
+
+    .container .center .meniu .textbox {
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .container .center .logo-img-math img {
+        width: 500px;
+        margin-top: 80px;
+    }
+
+    .container .meniu .search {
+        width: 120px;
+    }
+
+        .container .meniu .search input {
+            width: 90px;
+            margin-left: -1px;
+        }
+
+        .container .meniu .search button {
+            width: 10px;
+            margin-right: 10px;
+        }
+
+    .container .center .meniu .navbar {
+        height: 50px;
+    }
+
+        .container .center .meniu .navbar a {
+            font-size: 10px;
+        }
+
+        .container .center .meniu .navbar .dropdown .dropbtn {
+            font-size: 10px;
+        }
+}
+
+
+
+@media screen and ( max-width: 920px) {
+    .container .set div img{
+        max-width: 100px;
+    }
+    .container .center .logo-img-math img {
+        width: 450px;
+        margin-top: 100px;
+    }
+
+    .text-log {
+        top: 30%;
+    }
+
+    .container .center .meniu .textbox p {
+        font-size: 30px;
+    }
+
+    .container .center .meniu .textbox .login {
+        font-size: 10px;
+    }
+
+    .container .center .meniu .textbox .register {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .container .set div img {
+        max-width: 70px;
+    }
+
+    .container .center .logo-img-math img {
+        width: 400px;
+        margin-left: -50px;
+    }
+
+    .container .center .meniu .navbar {
+        width: 150%;
+        margin-left: -100px;
+    }
+
+        .container .center .meniu .navbar .textbox {
+            margin-left: 100px;
+        }
+}
+
+@media screen and ( max-width: 600px) {
+    .container .set div img {
+        max-width: 55px;
+    }
+
+    .container .center .logo-img-math img {
+        width: 350px;
+        margin-top: 120px;
+    }
+
+    .popup {
         position: absolute;
-        top: -17%;
+        top: 0;
     }
-    .register-left{
-        
-        width:60%;
-        height: 50%;
-    } 
-    .register-right{
-        position:absolute;
-        transform:translate(0%,75%);
+
+    .login-left {
         width: 60%;
-        height: 90%;
     }
-    .input-left{
-        margin-left: -20%;
-    } 
-    .already-account{
-       margin-top: -15%;
+
+    .login-right {
+        position: absolute;
+        transform: translate(0%,100%);
+        width: 60%;
+        height: 75%;
     }
-    .left-login{
-        margin-top: 5%;
+
+    .text-log {
+        margin-left: 14px;
+        top: 33%;
     }
-    .img-profil{
-        display: none;
-    }
-}
-@media screen and ( max-width: 500px) {
-    .register-left{
-        width: 80%;
-    }
-    .register-right{
-        width: 80%;
+
+    .container .center .meniu .navbar .textbox {
+        margin-left: 70px;
     }
 }
+
+@media screen and ( max-width: 520px) {
+    .login-left {
+        width: 70%;
+    }
+
+    .login-right {
+        width: 70%;
+    }
+
+    .container .center .meniu .navbar {
+        width: 170%;
+        margin-left: -100px;
+    }
+
+        .container .center .meniu .navbar .textbox {
+            margin-left: 100px;
+        }
+
+    .container .center .meniu .textbox p {
+        font-size: 20px;
+    }
+
+    .container .center .meniu .textbox .login {
+        font-size: 8px;
+    }
+
+    .container .center .meniu .textbox .register {
+        font-size: 8px;
+    }
+}
+
+@media screen and ( max-width: 440px) {
+    .container .set div img {
+        max-width: 40px;
+    }
+
+    .container .center .logo-img-math img {
+        width: 280px;
+        margin-top: 120px;
+    }
+
+    .login-left {
+        width: 80%;
+    }
+
+    .login-right {
+        width: 80%;
+    }
+
+    .text-log {
+        top: 35%;
+    }
+}
+
+@media screen and (max-width: 408px) {
+    .container .set div img {
+        max-width: 35px;
+    }
+
+    .container .center .meniu .navbar {
+        width: 170%;
+        margin-left: -70px;
+    }
+
+        .container .center .meniu .navbar .textbox {
+            margin-left: 100px;
+        }
+
+    .container .meniu .search {
+        width: 100px;
+    }
+
+        .container .meniu .search input {
+            width: 70px;
+            margin-left: -1px;
+            height: 20px;
+        }
+
+        .container .meniu .search button {
+            width: 8px;
+            margin-right: 10px;
+            height: 5px;
+            margin-top: 2px;
+        }
+
+    .container .center .meniu .navbar .textbox {
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+}
+
 @media screen and ( max-width: 400px) {
-    .register-left{
+    .login-left {
         width: 100%;
     }
-    .register-right{
+
+    .welcome {
+        margin-left: 20px;
+    }
+
+    .login-right {
         width: 100%;
+    }
+
+    .log-login {
+        margin-left: 20px;
+    }
+
+    .text-log {
+        margin-top: 25%;
+        margin-left: 50px;
     }
 }
 
-@media screen and ( max-height: 704px)
-{
-   .popup-register{
-       top: 5%;
-       height: 90%;
-   }
-}
-@media screen and ( max-height: 705px){
-    .popup-register{
-        top: -40%;
+@media screen and (max-width: 386px) {
+    .container .set div img {
+        max-width: 30px;
     }
-    .already-account{
+
+    .container .center .meniu .navbar {
+        width: 190%;
+        margin-left: -85px;
+    }
+}
+
+@media screen and ( max-width: 360px) {
+    .container .set div img {
+        max-width: 25px;
+    }
+
+    .text-log {
+        margin-left: 20px;
+    }
+
+    .container .center .meniu .navbar {
+        margin-left: -80px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container .meniu .search {
         display: none;
     }
-    .register-left{
-        height: 30%;
-        transform: translateY(30%);
-    }
 }
 
+@media screen and ( max-width: 320px) {
+    .text-log {
+        margin-left: 10px;
+    }
 
+    .container .center .meniu .navbar {
+        width: 170%;
+        margin-left: -50px;
+    }
 
-   
+        .container .center .meniu .navbar .textbox {
+            margin-left: 30px;
+        }
+}
