@@ -1,0 +1,1184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(207, 48, 48);
+    background: radial-gradient(circle, rgba(141,246,107,1) 0%, rgba(224,240,109,1) 41%, rgba(156,231,120,1) 100%);
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo-img-math img {
+    position: absolute;
+    top: -80px;
+    width: 780px;
+}
+
+section .set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+    section .set div {
+        position: absolute;
+        display: block;
+    }
+
+        section .set div img {
+            max-height: 180px;
+            max-width: 150px;
+        }
+
+        /*
+animate 18s : viteza cu care sa mearga: e mai mica, merge mai repede;
+linear infinite: sa cada incontinuu, daca nu scriem linear infinite, cade, se opreste si dupa ce vin toate porneste iar;
+animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
+				  daca e cu minus cat mai mare, porneste de la mijloc ;
+*/
+        section .set div:nth-child(1) {
+            left: 1%;
+            animation: animate 15s linear infinite;
+            animation-delay: -2s;
+        }
+
+        section .set div:nth-child(2) {
+            left: 13%;
+            animation: animate 9s linear infinite;
+            animation-delay: -2s;
+        }
+
+        section .set div:nth-child(3) {
+            left: 3%;
+            animation: animate 14s linear infinite;
+        }
+
+        section .set div:nth-child(4) {
+            left: 6%;
+            animation: animate 15s linear infinite;
+            animation-delay: -5s;
+        }
+
+        section .set div:nth-child(5) {
+            right: 10%;
+            animation: animate 7s linear infinite;
+        }
+
+        section .set div:nth-child(6) {
+            right: 0%;
+            animation: animate 5s linear infinite;
+        }
+
+        section .set div:nth-child(7) {
+            right: 5%;
+            animation: animate 14s linear infinite;
+        }
+
+        section .set div:nth-child(8) {
+            right: 15%;
+            animation: animate 15s linear infinite;
+            animation-delay: -2s;
+        }
+
+        section .set div:nth-child(9) {
+            right: 10%;
+            animation: animate 10s linear infinite;
+        }
+
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+        top: -10%;
+    }
+
+    10% {
+        opacity: 0.2;
+    }
+
+    20% {
+        opacity: 0.4;
+        transform: rotate(120deg);
+    }
+
+    40% {
+        opacity: 0.6;
+        transform: rotate(225deg);
+    }
+
+    60% {
+        opacity: 0.9;
+        transform: rotate(80deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        top: 100%;
+        transform: rotate(225deg);
+    }
+}
+
+
+.set2 {
+    transform: scale(1) rotateX(180deg);
+    filter: blur(3px);
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    height: 99%;
+    border-radius: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #248D22;
+    border-radius: 5px;
+    margin-top: 175px;
+}
+
+    .navbar a {
+        float: left;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+    .dropdown .dropbtn {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: grey;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 3%;
+}
+
+    .logo img {
+        max-width: 500px;
+    }
+
+.textbox {
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 23%;
+    padding: 5px;
+}
+
+    .textbox p {
+        padding: 10px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 40px;
+    }
+
+    .textbox .login {
+        float: right;
+        padding: 15px 32px;
+        outline: none;
+        border: 2px solid #248D22;
+        background: none;
+        text-decoration: none;
+        color: black;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 4px 2px;
+    }
+
+.login:hover {
+    background-color: #248D22;
+    color: white;
+}
+
+.textbox .register {
+    float: right;
+    padding: 15px 32px;
+    outline: none;
+    border: 2px solid red;
+    background: none;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 4px 2px;
+}
+
+    .textbox .register:hover {
+        background-color: red;
+        color: white;
+    }
+
+.search {
+    float: right;
+}
+
+    .search button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background-color: #248D22;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        border: none;
+        outline: none;
+    }
+
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-left: 130px;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1.5px solid #000000;
+    outline: none;
+    color: white;
+}
+
+::placeholder {
+    color: black;
+}
+
+.popup {
+    height: 61%;
+    width: 100%;
+    position: absolute;
+    top: 22%;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.popup-register {
+    height: 61%;
+    width: 51%;
+    top: 22%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+    .popup-register .profile-text {
+        text-align: center;
+        position: relative;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 20px;
+    }
+
+    .popup-register .profile-text-second {
+        text-align: center;
+        position: relative;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .popup-register .img-profil {
+        max-width: 170px;
+        max-height: 150px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+    }
+
+    .popup-register #file {
+        position: relative;
+        margin-top: 50px;
+        left: 30%;
+    }
+
+    .popup-register .already-account {
+        position: relative;
+        left: 20px;
+        top: 80px;
+        font-size: 20px;
+    }
+
+    .popup-register .left-login {
+        position: relative;
+        left: 67%;
+        top: 9%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        background: none;
+        border-radius: 10px;
+    }
+
+        .popup-register .left-login:hover {
+            background-color: green;
+        }
+
+.login-right {
+    height: 380px;
+    width: 300px;
+    background: white;
+    padding: 20px;
+    position: relative;
+}
+
+.popup .login-right input {
+    margin: 20px auto;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: black;
+    border: 1px solid grey;
+}
+
+.close {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    max-width: 15px;
+    max-height: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-register {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    max-width: 15px;
+    max-height: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup .login-right .data {
+    position: relative;
+    top: 5%;
+}
+
+    .popup .login-right .data input {
+        position: relative;
+        height: 45px;
+        width: 100%;
+        margin: 40px 0;
+        top: 100%;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1.5px solid #000000;
+        outline: none;
+    }
+
+#log {
+    background: none;
+    border: 1px solid #248D22;
+    position: relative;
+    top: 100%;
+    left: 33%;
+    padding: 8px;
+    font-size: 20px;
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+    #log:hover {
+        width: 200px;
+        left: 16%;
+        background-color: #248D22;
+    }
+
+.login-left {
+    background: rgb(92,171,67);
+    background: radial-gradient(circle, rgba(92,171,67,1) 0%, rgba(130,209,103,1) 0%, rgba(83,147,53,1) 88%, rgba(83,177,49,1) 97%, rgba(69,154,66,1) 100%);
+    height: 380px;
+    width: 300px;
+    box-shadow: -4px 3px 18px -1px rgba(10,0,10,0.68);
+    border-radius: 4px;
+}
+
+.popup .login-left .log-login {
+    max-width: 120px;
+    position: relative;
+    left: 30%;
+}
+
+.login-left .welcome {
+    position: relative;
+    font-size: 50px;
+    color: white;
+    left: 20%;
+}
+
+.login-left .account-box {
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.left-register {
+    position: relative;
+    left: 75%;
+    top: 38%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-radius: 10px;
+}
+
+    .left-register:hover {
+        background-color: red;
+    }
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.animate {
+    animation: animatezoom 0.3s
+}
+
+.text-log {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    margin-top: 12%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 30px;
+    color: white;
+}
+
+
+.register-left {
+    background: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(92,171,67);
+    background: radial-gradient(circle, rgba(92,171,67,1) 0%, rgba(130,209,103,1) 0%, rgba(83,147,53,1) 88%, rgba(83,177,49,1) 97%, rgba(69,154,66,1) 100%);
+    box-shadow: -4px 3px 18px -1px rgba(10,0,10,0.68);
+    border-radius: 4px;
+}
+
+.register-right {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+    .register-right h1 {
+        margin-top: 30px;
+        margin-left: 33%;
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+.form-register {
+    margin-top: 15%;
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 34px
+}
+
+.icon {
+    padding: 10px;
+    background: green;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.inp {
+    width: 60%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+
+.sub-btn {
+    background: none;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    width: 50%;
+    opacity: 0.9;
+    border: 1px solid green;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+    .sub-btn:hover {
+        background-color: green;
+        color: white;
+    }
+
+
+@media screen and (max-width: 1480px) {
+    .container .meniu .search {
+        width: 200px;
+    }
+
+        .container .meniu .search input {
+            width: 160px;
+            margin-left: -1px;
+        }
+
+        .container .meniu .search button {
+            width: 30px;
+            margin-right: 10px;
+        }
+}
+
+
+@media screen and ( max-width: 1270px) {
+    .text-log {
+        top: 20%;
+    }
+
+    .container .center .logo-img-math img {
+        width: 600px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    .container .center .meniu .textbox {
+        margin-left: 10%;
+    }
+
+    .container .center .meniu .logo img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    .container .meniu .search {
+        width: 150px;
+    }
+
+        .container .meniu .search input {
+            width: 120px;
+            margin-left: -1px;
+        }
+
+        .container .meniu .search button {
+            width: 15px;
+        }
+
+    .container .center .meniu .navbar {
+        height: 50px;
+    }
+
+        .container .center .meniu .navbar a {
+            font-size: 15px;
+        }
+
+        .container .center .meniu .navbar .dropdown .dropbtn {
+            font-size: 15px;
+        }
+
+    .container .center .meniu .textbox {
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .container .center .logo-img-math img {
+        width: 500px;
+        margin-top: 80px;
+    }
+
+    .container .meniu .search {
+        width: 120px;
+    }
+
+        .container .meniu .search input {
+            width: 90px;
+            margin-left: -1px;
+        }
+
+        .container .meniu .search button {
+            width: 10px;
+            margin-right: 10px;
+        }
+
+    .container .center .meniu .navbar {
+        height: 50px;
+    }
+
+        .container .center .meniu .navbar a {
+            font-size: 10px;
+        }
+
+        .container .center .meniu .navbar .dropdown .dropbtn {
+            font-size: 10px;
+        }
+}
+
+
+
+@media screen and ( max-width: 920px) {
+    .container .set div img{
+        max-width: 100px;
+    }
+    .container .center .logo-img-math img {
+        width: 450px;
+        margin-top: 100px;
+    }
+
+    .text-log {
+        top: 30%;
+    }
+
+    .container .center .meniu .textbox p {
+        font-size: 30px;
+    }
+
+    .container .center .meniu .textbox .login {
+        font-size: 10px;
+    }
+
+    .container .center .meniu .textbox .register {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .container .set div img {
+        max-width: 70px;
+    }
+
+    .container .center .logo-img-math img {
+        width: 400px;
+        margin-left: -50px;
+    }
+
+    .container .center .meniu .navbar {
+        width: 150%;
+        margin-left: -100px;
+    }
+
+        .container .center .meniu .navbar .textbox {
+            margin-left: 100px;
+        }
+}
+
+@media screen and ( max-width: 600px) {
+    .container .set div img {
+        max-width: 55px;
+    }
+
+    .container .center .logo-img-math img {
+        width: 350px;
+        margin-top: 120px;
+    }
+
+    .popup {
+        position: absolute;
+        top: 0;
+    }
+
+    .login-left {
+        width: 60%;
+    }
+
+    .login-right {
+        position: absolute;
+        transform: translate(0%,100%);
+        width: 60%;
+        height: 75%;
+    }
+
+    .text-log {
+        margin-left: 14px;
+        top: 33%;
+    }
+
+    .container .center .meniu .navbar .textbox {
+        margin-left: 70px;
+    }
+}
+
+@media screen and ( max-width: 520px) {
+    .login-left {
+        width: 70%;
+    }
+
+    .login-right {
+        width: 70%;
+    }
+
+    .container .center .meniu .navbar {
+        width: 170%;
+        margin-left: -100px;
+    }
+
+        .container .center .meniu .navbar .textbox {
+            margin-left: 100px;
+        }
+
+    .container .center .meniu .textbox p {
+        font-size: 20px;
+    }
+
+    .container .center .meniu .textbox .login {
+        font-size: 8px;
+    }
+
+    .container .center .meniu .textbox .register {
+        font-size: 8px;
+    }
+}
+
+@media screen and ( max-width: 440px) {
+    .container .set div img {
+        max-width: 40px;
+    }
+
+    .container .center .logo-img-math img {
+        width: 280px;
+        margin-top: 120px;
+    }
+
+    .login-left {
+        width: 80%;
+    }
+
+    .login-right {
+        width: 80%;
+    }
+
+    .text-log {
+        top: 35%;
+    }
+}
+
+@media screen and (max-width: 408px) {
+    .container .set div img {
+        max-width: 35px;
+    }
+
+    .container .center .meniu .navbar {
+        width: 170%;
+        margin-left: -70px;
+    }
+
+        .container .center .meniu .navbar .textbox {
+            margin-left: 100px;
+        }
+
+    .container .meniu .search {
+        width: 100px;
+    }
+
+        .container .meniu .search input {
+            width: 70px;
+            margin-left: -1px;
+            height: 20px;
+        }
+
+        .container .meniu .search button {
+            width: 8px;
+            margin-right: 10px;
+            height: 5px;
+            margin-top: 2px;
+        }
+
+    .container .center .meniu .navbar .textbox {
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and ( max-width: 400px) {
+    .login-left {
+        width: 100%;
+    }
+
+    .welcome {
+        margin-left: 20px;
+    }
+
+    .login-right {
+        width: 100%;
+    }
+
+    .log-login {
+        margin-left: 20px;
+    }
+
+    .text-log {
+        margin-top: 25%;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 386px) {
+    .container .set div img {
+        max-width: 30px;
+    }
+
+    .container .center .meniu .navbar {
+        width: 190%;
+        margin-left: -85px;
+    }
+}
+
+@media screen and ( max-width: 360px) {
+    .container .set div img {
+        max-width: 25px;
+    }
+
+    .text-log {
+        margin-left: 20px;
+    }
+
+    .container .center .meniu .navbar {
+        margin-left: -80px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container .meniu .search {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 320px) {
+    .text-log {
+        margin-left: 10px;
+    }
+
+    .container .center .meniu .navbar {
+        width: 170%;
+        margin-left: -50px;
+    }
+
+        .container .center .meniu .navbar .textbox {
+            margin-left: 30px;
+        }
+}
+@media screen and ( max-width: 1430px){
+    .left-login{
+        position: relative;
+        margin-left: 50px;
+    }
+
+}
+
+@media screen and ( max-width: 1245px){
+    .input-left{
+        margin-left: -70%;
+        top:10%;
+    }
+}
+@media screen and ( max-width: 1130px){
+    .input-left{
+        margin-left:-70%;
+        margin-top: 20%;
+    }
+   
+    .popup-register{
+
+        width: 100%;
+        position: absolute;
+        margin-left: -250px;
+    }
+    .register-left{
+        width: 30%;
+    }
+    .register-right{
+        width: 30%;
+    }
+    .close-register{
+        left:78%;
+
+    }
+    
+}
+
+@media screen and ( max-width: 970px){
+    .register-left{
+        width: 40%;
+    }
+    .register-right{
+        width: 40%;
+    }
+    .already-account{
+        position: absolute;
+        margin-top: 80px;
+    }
+    .input-left{
+        margin-left:-50%;
+        margin-top: 20%;
+    }
+    .close-register{
+        left:88%;
+
+    }
+}
+@media screen and ( max-width: 880px){
+    .register-left{
+        width: 40%;
+    }
+    .register-right{
+        width: 40%;
+    }
+    .popup-register{
+
+        width: 100%;
+        position: absolute;
+        margin-left: -200px;
+    }
+    .input-left{
+        margin-left:-70%;
+        margin-top: 20%;
+    }
+    .already-account{
+       width: 60%;
+    }
+}
+
+@media screen and ( max-width: 700px){
+    .register-left{
+        width: 50%;
+    }
+    .register-right{
+        width: 50%;
+    }
+    .input-left{
+        margin-left:-70%;
+        margin-top: 20%;
+    }
+    .popup-register{
+
+        width: 100%;
+        position: absolute;
+        margin-left: -170px;
+    }
+    .close-register{
+        left:95%;
+
+    }
+}
+@media screen and ( max-width: 615px){
+    .popup-register{
+
+        width: 100%;
+        position: absolute;
+        margin-left: -150px;
+    }
+}
+@media screen and ( max-width: 545px){
+    .popup-register{
+        position: absolute;
+        top: -6%;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,90%);
+        width: 60%;
+        height: 90%;
+    }
+    .register-left{
+        width: 60%;
+        height: 75%;
+    }
+    .logo-img-math{
+        display: none;
+    }
+    .already-account{
+        position: absolute;
+        margin-top: 20px;
+
+    }
+    .register-left img{
+        max-width: 10px;
+        max-height: 10px;
+    }
+    .img-profil {
+        
+        position: relative;
+        width: 100px;
+        height: 100px;
+    }
+    .input-left{
+        margin-left:-60%;
+        top:20%;
+    }
+
+}
+@media screen and ( max-width: 475px){
+    .popup-register{
+        position: absolute;
+        top: -6%;
+        margin-left: -115px;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,90%);
+        width: 100%;
+        height: 90%;
+    }
+    .register-left{
+        width: 100%;
+        height: 75%;
+    }
+    .input-left{
+        margin-left:-50%;
+        top:20%;
+    }
+}
+@media screen and ( max-width: 390px){
+    .popup-register{
+        position: absolute;
+        top: -6%;
+        margin-left: -95px;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,90%);
+        width: 100%;
+        height: 90%;
+    }
+    .register-left{
+        width: 100%;
+        height: 75%;
+    }
+}
+@media screen and ( max-width: 355px){
+    .popup-register{
+        position: absolute;
+        top: -6%;
+        margin-left: -85px;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,90%);
+        width: 100%;
+        height: 90%;
+    }
+    .register-left{
+        width: 100%;
+        height: 75%;
+    }
+}
+@media screen and ( max-height: 670px){ 
+    .img-profil {
+        display: none;
+    }
+    .input-left{
+        margin-left:-20%;
+        top:0%;
+    }
+    .already-account{
+        position: absolute;
+        margin-top: -50px;
+        width:100%;
+
+    }
+    .popup-register{
+        top: -13%;
+    }
+    .register-left{
+        height: 65%;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,80%);
+        width: 100%;
+        height: 105%;
+    }
+}

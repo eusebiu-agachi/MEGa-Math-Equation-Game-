@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> MEGa (Math Equation Game) </title>
+</head>
+
+<body prefix="schema: https://schema.org/" prefix="sa:https://ns.science.ai/" itemscope=""
+      itemtype="http://schema.org/WebPage">
+    <article typeof="schema:ScholarlyArticle">
+        <header>
+            <h1> MEGa (Math Equation Game) </h1>
+        </header>
+        <h2>Table of contents</h2>
+        <ul>
+            <li>
+                <a href="#authors">Authors</a>
+            </li>
+            <li>
+                <a href="#introduction">1. Introduction</a>
+                <ul>
+                    <li><a href="#introduction-purpose">1.1 Purpose</a></li>
+                    <li><a href=" #conventions">1.2 Document Conventions</a></li>
+                    <li><a href="#audience">1.3 Intended Audience and Reading Suggestions</a></li>
+                    <li><a href="#product-scope">1.4 Product Scope</a></li>
+                    <li><a href="#product-references">1.5 References</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#overall">2. Overall Description</a>
+                <ul>
+                    <li><a href="#product-perspective">2.1 Product Perspective</a></li>
+                    <li><a href="#product-functions">2.2 Product Functions</a></li>
+                    <li><a href="#users">2.3 User Classes and Characteristics</a></li>
+                    <li><a href="#operating-environment">2.4 Operating Environment</a></li>
+                    <li><a href="#constraints">2.5 Design and Implementation Constraints</a></li>
+                    <li><a href="#documentantion">2.6 User Documentation</a></li>
+                    <li><a href="#dependencies">2.7 Assumptions and Dependencies</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#external">3. External Interface Requirements</a>
+                <ul>
+                    <li>
+                        <a href="#user-interface">3.1 User Interfaces</a>
+                        <ul>
+                            <li><a href="#user-interface-1">3.1.1 Home Interface</a></li>
+                            <li><a href="#user-interface-2">3.1.2 Login Intreface</a></li>
+                            <li><a href="#user-interface-3">3.1.3 Register Interface</a></li>
+                            <li><a href="#user-interface-4">3.1.4 Contact Interface</a></li>
+                            <li><a href="#user-interface-5">3.1.5 Problem list Interface (for primary school)</a></li>
+                            <li><a href="#user-interface-6">3.1.6 Problem list Interface (for other categories)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#hardware-interface">3.2 Hardware Interfaces</a></li>
+                    <li><a href="#software-interface">3.3 Software Interfaces</a></li>
+                    <li><a href="#communications-interface">3.4 Communications Interfaces</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#system-features">4. System Features</a>
+                <ul>
+                    <li><a href="#system-features-1">System Feature 1: Solving Math Problems</a></li>
+                    <li><a href="#system-features-2">System Feature 2: Participation in the Top</a></li>
+                    <li><a href="#system-features-3">System Feature 3: Giving Hints</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#non-functional">5. Other Nonfunctional Requirements</a>
+                <ul>
+                    <li><a href="#performance">5.1 Performance Requirements</a></li>
+                    <li><a href="#safety">5.2 Safety Requirements</a></li>
+                    <li><a href="#security">5.3 Security Requirements</a></li>
+                    <li><a href="#software">5.4 Software Quality Attributes</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#other-requirements">Other Requirements</a>
+                <ul>
+                    <li><a href="#formalization">1. Formalization of input data</a></li>
+                </ul>
+            </li>
+        </ul>
+        <section id="authors" typeof="sa:AuthorsList">
+            <div role="contentinfo">
+                <h2>Authors</h2>
+                <ul>
+                    <li typeof="sa:ContribuitorRole" property="schema:author">
+                        <span typeof="sa:Person">
+                            <meta property="schema:givenName" content="Razvan" />
+                            <meta property="schema:familyName" content="Benchia" />
+                            <span property="schema:name"> Razvan Benchia </span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailTo:razvanbenchia9716@gmail.com" property="schema:email">razvanbenchia9716@gmail.com</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li typeof="sa:ContribuitorRole" property="schema:author">
+                        <span typeof="sa:Person">
+                            <meta property="schema:givenName" content="Eusebiu" />
+                            <meta property="schema:familyName" content="Agachi" />
+                            <span property="schema:name"> Eusebiu Agachi </span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailTo:agachi.eusebiu@yahoo.com" property="schema:email">agachi.eusebiu@yahoo.com</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li typeof="sa:ContribuitorRole" property="schema:author">
+                        <span typeof="sa:Person">
+                            <meta property="schema:givenName" content="Cristian" />
+                            <meta property="schema:familyName" content="Dobrovici" />
+                            <span property="schema:name"> Cristian Dobrovici </span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailTo:pllp24@yahoo.com" property="schema:email">pllp24@yahoo.com</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section typeof="sa:Abstract">
+            <div role="document">
+                <h2 id="introduction">1. Introduction</h2>
+                <h3 id="introduction-purpose">1.1 Purpose</h3>
+                <p>
+                    The current version number for this product is 1.0 (first version). The product is intended for learning the basics of mathematics, in the form of interactive exercises.
+                </p>
+
+                <h3 id="conventions">1.2 Document Conventions</h3>
+                <ul>
+                    <li>Courier New - for the representative text of the pages</li>
+                    <li>Icon Hint - used to buy a hint for a particular problem</li>
+                </ul>
+
+                <h3 id="audience">1.3 Intended Audience and Reading Suggestions</h3>
+                <p>
+                    The document is intended for users, developers and testers. We suggest reading the document for users in the current format, starting with the introduction. For developers and testers, we suggest reading the document with the "Overall Description".
+                </p>
+
+                <h3 id="product-scope">1.4 Product Scope</h3>
+                <p>
+                    The aim for the user is to accumulate knowledge about different fields of mathematics (algebra, geometry, trigonometry, analysis), by age categories (primary, middle school, high school). The problems presented in the application are divided into modules - light, medium and a difficult problem, which requires addiotional research on the solution technique. The user has the possibility to buy hints in the application, in order to test their basic knowledge.
+                </p>
+
+                <h3 id="product-references" typeof="sa:ReferenceList">1.5 References</h3>
+                <ul>
+                    <li class="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html">
+                        <span property="schema:author" typeof="schema:Person">
+                            <span property="schema:familyName">Buraga</span>
+                            <span property="schema:givenName">Sabin</span>.
+                            <span property="schema:additionalName">Corneliu</span>
+                        </span>
+                        <cite property="schema:name">Site Tehnologii Web.</cite>
+                        <span property="schema:isPartOf" typeof="schema:PublicationVolume">
+                            <span property="schema:isPartOf" typeof="schema:Periodical">
+                                <span property="schema:name">FII UAIC.</span>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://github.com/rick4470/IEEE-SRS-Tempate">
+                        <span property="schema:author" typeof="schema:Person">
+                            <span property="schema:familyName">H</span>
+                            <span property="schema:givenName">Rick</span>.
+                        </span>
+                        <cite property="schema:name">IEEE-Template.</cite>
+                        <span property="schema:isPartOf" typeof="schema:Periodical">
+                            <span property="schema:name">GitHub</span>
+                        </span>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://w3c.github.io/scholarly-html/">
+                        <cite property="schema:name">Scholarly HTML</cite>
+                        <span property="schema:isPartOf" typeof="schema:Periodical">
+                            <span property="schema:name">w3c.gihtub.io</span>
+                        </span>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section typeof="sa:MaterialsAndMethods">
+            <div role="document">
+                <h2 id="overall">2. Overall Description</h2>
+                <h3 id="product-perspective">2.1 Product Perspective</h3>
+                <p>
+                    This product is presented as a new product, autonomous, but still similar to sites for others fields (computer science, biology etc.). It shares the same ideas with many other sites, but for the fields of mathematics.
+                </p>
+
+                <h3 id="product-functions">2.2 Product Functions</h3>
+                <ul>
+                    <li>Math problem solving</li>
+                    <li>Registration in the application</li>
+                    <li>Application authentication</li>
+                    <li>Sending feedback about application</li>
+                    <li>Editing the user profile</li>
+                </ul>
+
+                <h3 id="users">2.3 Uses Classes and Characteristics</h3>
+                <p>
+                    We believe that the class of users who will use this application will be mainly composed of students from primary school, middle school and high school. They can solve interactive problems, being rewarded for each problem solved correctly with virtual coins.
+                </p>
+
+                <h3 id="operating-environment">2.4 Operating Environment</h3>
+                <p>
+                    For optimal use of the application, version 1.0, we recommend using the Mozilla Firefox browser (other browsers may not display properly). Also, there is no need for top hardware specifications - due to the simplicity of the application, we believe that it can run on the vast majority of computers.
+                </p>
+
+                <h3 id="constraints">2.5 Design and Implementation Constraints</h3>
+                <p>
+                    For the web application interface, Math Equation Game, we used only HTML5, CSS3 and JavaScript. Instead, to create the backend we will mainly use PHP. The developer is constrained by the fact that presenting problems to the client requires the use of the MathML utility. This utility contains certain "components" that do not display to customer information correctly, so little tricks have been used.
+
+                </p>
+
+                <h3 id="documentantion">2.6 User Documentation</h3>
+                <p>
+                    In order for the web application to work in optimal parameters, it is necessary to use the Firefox browser. The MathML format is not supported by some browsers, and for this reason, it is recommended to use the Firefox browser.
+                </p>
+
+                <h3 id="dependencies">2.7 Assumptions and Dependencies</h3>
+                <p>
+                    The part of the database in which users' information is stored may affect the utility of the application (for example, if the database service requires a fee, depending on the complexity, changes will be made to the application).
+                </p>
+            </div>
+        </section>
+
+        <section typeof="sa:MaterialsAndMethods">
+            <div role="document">
+                <h2 id="external">3. External Interface Requirements</h2>
+                <h3 id="user-interface">3.1 User Interface</h3>
+                <p>
+                    The components for which a graphical user interface was required are:
+                </p>
+                <ul>
+                    <li>Home window</li>
+                    <li>Login window</li>
+                    <li>Register window</li>
+                    <li>Contact window</li>
+                    <li>Problem list window (separate window for each student category, respectively each category of mathematics field)</li>
+                </ul>
+                <h4>3.1.1 Home Interface</h4>
+                <p>
+                    The image below is the main window, in which the user will enter to authenticate or register. The user has at his disposal a navigation bar, through which he can access the contact page, he can access the proposed problem categories or he can search for information in the application. Also, by using the "login" button, the user will be sent to the page intended for authentication, and by using the "register" button, the user will be sent to the page intended for registration in the application.
+                </p>
+                <figure typeof="sa:image" id="user-interface-1">
+                    <img src="images/home.png" style="width:700px;height:300px;" alt="navbar-screenshot" class="screenshots-nav" />
+                    <figcaption>Home Interface</figcaption>
+                </figure>
+
+                <h4>3.1.2 Login Interface</h4>
+                <p>
+                    The image below represents the authentication window, in which the user can authenticate in the application. The user must enter their username and password to successfully complete the process. The user also has access to the key button, displayed next to the message "You don't have account?", which is redirected him to the registration window.
+                </p>
+                <figure typeof="sa:image" id="user-interface-2">
+                    <img src="images/login.png" style="width:700px;height:300px;" alt="navbar-screenshot" class="screenshots-nav" />
+                    <figcaption>Login Interface</figcaption>
+                </figure>
+
+                <h4>3.1.3 Register Interface</h4>
+                <p>
+                    The image below represents the registration window, where the user has the possibility to create an account. To create an account, the user must completely and correctly fill in all the fields for this service. The service ends successfully when the user presses the "register" button. The user also has the option to set the account profile picture. If the user realizes that he already has an account created in the application, he can press the key button, displayed next to the message "You already have an account?", which will redirect him to the login page.
+                </p>
+                <figure typeof="sa:image" id="user-interface-3">
+                    <img src="images/register.png" style="width:700px;height:300px;" alt="navbar-screenshot" class="screenshots-nav" />
+                    <figcaption>Register Interface</figcaption>
+                </figure>
+
+                <h4>3.1.4 Contact Interface</h4>
+                <p>
+                    The image below represents the contact page, where the user can leave a feedback, an observation or a possible improvement for the application, in the form of a message. The message will reach the application administrators, who will evaluate the received form. The user is obliged to correctly and completely fill in all the fields for this service. To successfully complete the service, the user will press the "submit" button.
+                </p>
+                <figure typeof="sa:image" id="user-interface-4">
+                    <img src="images/contact.png" style="width:700px;height:300px;" alt="navbar-screenshot" class="screenshots-nav" />
+                    <figcaption>Contact Interface</figcaption>
+                </figure>
+
+                <h4>3.1.5 Problem list Interface (for primary school)</h4>
+                <p>
+                    The image below is the problem window for the primary category, in which the interaction with the problems is done in the form of a game. We considered this method in this category because the primary category represents the youngest users of the application, and a form of play could stimulate them in solving exercises. The user also has access to the "Home" button, which redirects him to the main window, the "Contact" button, which allows the user to leave feedback, and the "Problems" button, which allows the user to access the other categories of problems.
+                </p>
+                <figure typeof="sa:image" id="user-interface-5">
+                    <img src="images/prim.png" style="width:700px;height:300px;" alt="navbar-screenshot" class="screenshots-nav" />
+                    <figcaption>Problem list Interface (for primary school)</figcaption>
+                </figure>
+
+                <h4>3.1.6 Problem list Interface (for other categories)</h4>
+                <p>
+                    The image below is the pattern for the list of problems for middle school and high school. Each category described above also includes different categories of problems (algebra, analysis, geometry, trigonometry). Each area of mathematics comprises five problems - 2 easy, 2 medium and a difficult problem, which require additional research to understand the solving technique. The user has the choice of the field of mathematics in which he wants to solve the proposed problems. Also, to solve a problem, the user must enter the answer in the field intended for him, and after pressing the button next to the field. If the user wants to solve a problem, but does not yet have an idea to start, he can call the "Do you want a hint?" Button, through which he receives either the answer grid variants or an indication of how to solve it. Calling the button decreases a number of coins in the user's account.
+                </p>
+                <figure typeof="sa:image" id="user-interface-6">
+                    <img src="images/others.png" style="width:700px;height:300px;" alt="navbar-screenshot" class="screenshots-nav" />
+                    <figcaption>Problem list Interface (for other categories)</figcaption>
+                </figure>
+
+                <h3 id="hardware-interface">3.2 Hardware Interfaces</h3>
+                    Devices that can interact with the application include both computers (PCs, laptops, other similar types) and tablets and mobile devices. Because the application has a responsive interface, it can scale information to different screen sizes.
+                    <figure typeof="sa:image" id="user-interface-mobile1">
+                        <img src="images/mobile1.png" style="width:300px;height:600px;" alt="navbar-screenshot" class="screenshots-nav" />
+                        <figcaption>Register Interface (for mobile)</figcaption>
+                    </figure>
+
+                    <figure typeof="sa:image" id="user-interface-mobile2">
+                        <img src="images/mobile2.png" style="width:300px;height:600px;" alt="navbar-screenshot" class="screenshots-nav" />
+                        <figcaption>Problems List Interface (for mobile)</figcaption>
+                    </figure>
+
+                <h3 id="software-interface">3.3 Software Interfaces</h3>
+                <p>
+                    A first software component that establishes a connection with the application is the database. To access the database, the PHP language is used, and to modify the data inside the database, MySQL is used. The application also uses the MathType utility suite, which allows the correct formatting and the correct display of problems in the form of MathML. The application administrator enters the desired equation in the MathType utility, and through certain commands, the utility returns the equation in MathML form, which will be entered in the HTML file, for a correct display of the equation for the user. Also, scripts written in JavaScript language are used to improve the user experience in the application.
+                </p>
+
+                <h3 id="communications-interface">3.4 Communications Interfaces</h3>
+                <p>
+                    The application imposes the condition that the user has an internet connection, in order to be able to verify the answers given by him. Also, the internet connection is necessary regarding the contact with the application developers, in the contact window. Another protocol that is used within the application (on the server side) is the HTTP protocol.
+                </p>
+            </div>
+        </section>
+
+        <section typeof="sa:MaterialsAndMethods">
+            <div role="document">
+                <h2 id="system-features">4. System Features</h2>
+                <h3 id="system-features-1">4.1 System Feature 1: Solving Math Problems</h3>
+                <p>
+                    This feature has a high priority because it is the main feature of the application. In addition to the other features, the main purpose of the application is to solve, in an interactive way, math problems in different categories. Problems are considered solved if the user enters the correct answer of the problem in the field intended for the answer.
+                </p>
+
+                <h3 id="system-features-2">4.2 System Feature 2: Participation in the Top</h3>
+                <p>
+                    This feature has a medium priority, because the top helps users to be recognized in the application, but they have no reward (both in the application and outside it). Ranking in a place as high as possible in the ranking highlights the user as being diligent and determined to understand the techniques for solving the problems described in the application.
+                </p>
+
+                <h3 id="system-features-3">4.3 System Feature 3: Giving Hints</h3>
+                <p>
+                    This feature has a medium priority, because, based on a fee (a number of coins awarded before), the user can receive one or more clues on how to solve the problem. Also, the user can choose the type of clue to obtain: grid variants or clue on the solving technique.
+                </p>
+            </div>
+        </section>
+
+        <section typeof="sa:MaterialsAndMethods">
+            <div role="document">
+                <h2 id="non-functional">5. Other Nonfunctional Requirements</h2>
+                <h3 id="performance">5.1 Performance Requirements</h3>
+                <p>
+                    Currently (version 1.0 of the application), the developers consider that there are no performance requirements, as long as the application runs in a browser specified in the previous points (Mozilla Firefox).
+                </p>
+
+                <h3 id="safety">5.2 Safety Requirements</h3>
+                <p>
+                    The results of testing the application in the current version (1.0) showed that there are no losses, damages or losses that may occur from the use of the application. However, if a violation of one of the above is observed, it is recommended to isolate and analyze the incident.
+                </p>
+
+                <h3 id="security">5.3 Security Requirements</h3>
+                <p>
+                    The database used is MySQL, and each user's data is stored in the database. Each user's password is not stored properly, but is applied to a hash, after which it is concatenated with another random string. The final result is stored in the database. Through certain functions that cannot be revealed publicly, each user logs in to his password.
+                </p>
+
+                <h3 id="software">5.4 Software Quality Attributes</h3>
+                <p>
+                    The application has as secondary purpose reliability, but also portability on different devices (computer, tablet, phone). This work is done with the help of the responsive interface, but also with the periodic care of the application by the developers. If a significant improvement is needed then a new patch appears, in the form of a version.
+                </p>
+            </div>
+        </section>
+
+        <section typeof="sa:ReferenceList">
+            <div role="document">
+                <h2 id="other-requirements">Other Requirements</h2>
+                <h3 id="formalization">1. Formalization of input data</h3>
+                <p>
+                    In order for users' data to be stored correctly in the database, they must have the following formalities:
+                </p>
+                <ul>
+                    <li>Email termination must be required "@yahoo.com"</li>
+                    <li>The answer to a problem must be an integer in order to allow the application to validate the answer. The problems are designed in such a way that the answer is an integer. Example answers: "1", "-1", "0.0".</li>
+                </ul>
+            </div>
+        </section>
+    </article>
+</body>
+</html>
