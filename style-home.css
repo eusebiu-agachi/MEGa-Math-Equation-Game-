@@ -42,7 +42,6 @@ section .set {
         }
 
         /*
-
 animate 18s : viteza cu care sa mearga: e mai mica, merge mai repede;
 linear infinite: sa cada incontinuu, daca nu scriem linear infinite, cade, se opreste si dupa ce vin toate porneste iar;
 animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
@@ -950,4 +949,236 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
         .container .center .meniu .navbar .textbox {
             margin-left: 30px;
         }
+}
+@media screen and ( max-width: 1430px){
+    .left-login{
+        position: relative;
+        margin-left: 50px;
+    }
+
+}
+
+@media screen and ( max-width: 1245px){
+    .input-left{
+        margin-left: -70%;
+        top:10%;
+    }
+}
+@media screen and ( max-width: 1130px){
+    .input-left{
+        margin-left:-70%;
+        margin-top: 20%;
+    }
+   
+    .popup-register{
+
+        width: 100%;
+        position: absolute;
+        margin-left: -250px;
+    }
+    .register-left{
+        width: 30%;
+    }
+    .register-right{
+        width: 30%;
+    }
+    .close-register{
+        left:78%;
+
+    }
+    
+}
+
+@media screen and ( max-width: 970px){
+    .register-left{
+        width: 40%;
+    }
+    .register-right{
+        width: 40%;
+    }
+    .already-account{
+        position: absolute;
+        margin-top: 80px;
+    }
+    .input-left{
+        margin-left:-50%;
+        margin-top: 20%;
+    }
+    .close-register{
+        left:88%;
+
+    }
+}
+@media screen and ( max-width: 880px){
+    .register-left{
+        width: 40%;
+    }
+    .register-right{
+        width: 40%;
+    }
+    .popup-register{
+
+        width: 100%;
+        position: absolute;
+        margin-left: -200px;
+    }
+    .input-left{
+        margin-left:-70%;
+        margin-top: 20%;
+    }
+    .already-account{
+       width: 60%;
+    }
+}
+
+@media screen and ( max-width: 700px){
+    .register-left{
+        width: 50%;
+    }
+    .register-right{
+        width: 50%;
+    }
+    .input-left{
+        margin-left:-70%;
+        margin-top: 20%;
+    }
+    .popup-register{
+
+        width: 100%;
+        position: absolute;
+        margin-left: -170px;
+    }
+    .close-register{
+        left:95%;
+
+    }
+}
+@media screen and ( max-width: 615px){
+    .popup-register{
+
+        width: 100%;
+        position: absolute;
+        margin-left: -150px;
+    }
+}
+@media screen and ( max-width: 545px){
+    .popup-register{
+        position: absolute;
+        top: -6%;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,90%);
+        width: 60%;
+        height: 90%;
+    }
+    .register-left{
+        width: 60%;
+        height: 75%;
+    }
+    .logo-img-math{
+        display: none;
+    }
+    .already-account{
+        position: absolute;
+        margin-top: 20px;
+
+    }
+    .register-left img{
+        max-width: 10px;
+        max-height: 10px;
+    }
+    .img-profil {
+        
+        position: relative;
+        width: 100px;
+        height: 100px;
+    }
+    .input-left{
+        margin-left:-60%;
+        top:20%;
+    }
+
+}
+@media screen and ( max-width: 475px){
+    .popup-register{
+        position: absolute;
+        top: -6%;
+        margin-left: -115px;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,90%);
+        width: 100%;
+        height: 90%;
+    }
+    .register-left{
+        width: 100%;
+        height: 75%;
+    }
+    .input-left{
+        margin-left:-50%;
+        top:20%;
+    }
+}
+@media screen and ( max-width: 390px){
+    .popup-register{
+        position: absolute;
+        top: -6%;
+        margin-left: -95px;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,90%);
+        width: 100%;
+        height: 90%;
+    }
+    .register-left{
+        width: 100%;
+        height: 75%;
+    }
+}
+@media screen and ( max-width: 355px){
+    .popup-register{
+        position: absolute;
+        top: -6%;
+        margin-left: -85px;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,90%);
+        width: 100%;
+        height: 90%;
+    }
+    .register-left{
+        width: 100%;
+        height: 75%;
+    }
+}
+@media screen and ( max-height: 670px){ 
+    .img-profil {
+        display: none;
+    }
+    .input-left{
+        margin-left:-20%;
+        top:0%;
+    }
+    .already-account{
+        position: absolute;
+        margin-top: -50px;
+        width:100%;
+
+    }
+    .popup-register{
+        top: -13%;
+    }
+    .register-left{
+        height: 65%;
+    }
+    .register-right{
+        position:absolute;
+        transform:translate(0%,80%);
+        width: 100%;
+        height: 105%;
+    }
 }
