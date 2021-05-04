@@ -56,9 +56,11 @@
                         <div class="login-right">
                             <img src="../images/close.png" alt="close" class="close">
                             <div class="data">
-                                <input type="text" placeholder="Username" class="fa fa-user">
-                                <input type="password" placeholder="Password">
-                                <button type="submit" id="log">Login</button>
+                                <form action="../php/User/login.php" method="POST">
+                                    <input name="username" type="text" placeholder="Username" class="fa fa-user">
+                                    <input name="password" type="password" placeholder="Password">
+                                    <button type="submit" id="log">Login</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -74,7 +76,7 @@
                         <div class="register-right">
                             <h1>Register</h1>
                             <img src="../images/close.png" alt="close" class="close-register">
-                            <form action="registration.php" method="post" class="form-register">
+                            <form action="../php/User/register.php" method="POST" class="form-register">
                                 <div class="input">
                                     <i class="fa fa-user icon"></i>
                                     <input type="text" name="username" class="inp" placeholder="Username">
