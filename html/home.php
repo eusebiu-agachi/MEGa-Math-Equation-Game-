@@ -56,11 +56,9 @@
                         <div class="login-right">
                             <img src="../images/close.png" alt="close" class="close">
                             <div class="data">
-                                <form action="../php/User/login.php" method="POST">
-                                    <input name="username" type="text" placeholder="Username" class="fa fa-user">
-                                    <input name="password" type="password" placeholder="Password">
-                                    <button type="submit" id="log">Login</button>
-                                </form>
+                                <input id="user-id" name="username" type="text" placeholder="Username" class="fa fa-user">
+                                <input id="psw-id" name="password" type="password" placeholder="Password">
+                                <button type="submit" id="log">Login</button>
                             </div>
                         </div>
                     </div>
@@ -93,6 +91,7 @@
                                     <i class="fa fa-key icon"></i>
                                     <input type="password" name="repassword" class="inp" placeholder="Confirm your password!">
                                 </div>
+                                <p id="messageError"></p> 
                                 <input type="submit" name="submit" value="Register" class="sub-btn">
                             </form>
                         </div>
@@ -125,5 +124,34 @@
         </section>
     </div>
     <script src="../javascript/index.js"></script>
+    <script type="text/javascript">
+
+        var button = document.getElementById("log");
+            button.addEventListener("click", function() {
+                var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function() {
+                     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                        console.log(this.responseText);
+                        var myObj = JSON.parse(this.responseText);
+                        console.log(myObj.username);
+                        sessionStorage.setItem("username",myObj.username);
+                        sessionStorage.setItem("userId", myObj.id);
+                        sessionStorage.setItem("score", myObj.score);
+                        if(myObj.username !== "")
+                            window.location.assign("home-login.php");
+                    }
+                    else{
+                        document.getElementById('messageError').style.color="red";
+                        document.getElementById('messageError').innerHTML = "Userername sau parola gresita!"
+                    }              
+                       
+                }
+                xmlhttp.open("POST", "../php/User/login.php", true);
+                var data = new FormData();
+                data.append('username', document.getElementById("user-id").value);
+                data.append('password', btoa(document.getElementById("psw-id").value));
+                xmlhttp.send(data);
+        });
+    </script>
 </body>
 </html>

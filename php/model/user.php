@@ -28,14 +28,11 @@ class User{
 
     function login(){
         
-        $query = "SELECT 'id', 'username', 'password', 'created' FROM " . $this->table_name . "  WHERE username='".$this->username."' AND password='".$this->password."'";
+        $query = "SELECT ID, username, score FROM " . $this->table_name . "  WHERE username='".$this->username."' AND password='".$this->password."'";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute();
 
-        if($stmt->rowCount() > 0){
-            return true;
-        }
-        return false;
+        $stmt->execute();
+        return $stmt;
     }
 
     function register(){
