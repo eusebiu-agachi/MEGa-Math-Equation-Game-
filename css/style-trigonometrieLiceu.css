@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
 }
@@ -124,8 +124,7 @@ body {
     }
 
         .container .right .problem {
-            
-			position: relative;
+            position: relative;
             width: 100%;
             height: 25%;
             border-left: 1px solid black;
@@ -183,10 +182,9 @@ body {
     padding: 20px;
 }
 
-.container .right .problem .cerinta p{
-	font-size:23px;
-	
-}
+    .container .right .problem .cerinta p {
+        font-size: 23px;
+    }
 
 .container .right .problem .raspuns {
     position: relative;
@@ -259,7 +257,6 @@ body {
 
         .container .left .trigonometrie img {
             max-width: 60%;
-            
         }
 
     .container .right {
@@ -444,3 +441,46 @@ body {
     }
 }
 
+table {
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    overflow: hidden;
+    width: 90%;
+}
+
+.tr {
+    background-color: green;
+    color: white;
+}
+
+td, th {
+    border: 1px solid green;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.pages {
+    text-decoration: none;
+    color: green;
+    position: relative;
+    top: 50%;
+}
+
+.prb-liceu {
+    position: absolute;
+    text-decoration: none;
+    border: 1px solid green;
+    color: black;
+    padding: 10px;
+    left: 23%;
+    border-radius: 10px;
+}
+
+    .prb-liceu:hover {
+        color: white;
+        background-color: green;
+    }

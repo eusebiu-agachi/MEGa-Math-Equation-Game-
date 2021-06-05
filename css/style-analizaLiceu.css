@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
 }
@@ -253,7 +253,6 @@ body {
 
         .container .left .trigonometrie img {
             max-width: 60%;
-            
         }
 
     .container .right {
@@ -437,3 +436,47 @@ body {
         font-size: 8px;
     }
 }
+
+table {
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    overflow: hidden;
+    width: 90%;
+}
+
+.tr {
+    background-color: green;
+    color: white;
+}
+
+td, th {
+    border: 1px solid green;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.pages {
+    text-decoration: none;
+    color: green;
+    position: relative;
+    top: 50%;
+}
+
+.prb-liceu {
+    position: absolute;
+    text-decoration: none;
+    border: 1px solid green;
+    color: black;
+    padding: 10px;
+    left: 23%;
+    border-radius: 10px;
+}
+
+    .prb-liceu:hover {
+        color: white;
+        background-color: green;
+    }
