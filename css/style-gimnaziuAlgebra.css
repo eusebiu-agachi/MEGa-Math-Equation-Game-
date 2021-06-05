@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
 }
@@ -180,7 +180,7 @@ body {
     position: relative;
     margin-left: 10%;
     margin-top: 0;
-    padding: 27px;
+    padding: 20px;
 }
 
 .container .right .problem .raspuns {
@@ -430,4 +430,51 @@ body {
         margin-top: 10px;
         font-size: 8px;
     }
+}
+table {
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    overflow: hidden;
+    width: 90%;
+    
+  }
+.tr{
+    background-color: green;
+    color: white;
+    
+}
+  td, th {
+    border: 1px solid green;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+.pages{
+    text-decoration: none;
+    position: relative;
+    top:50%;
+    padding: 10px;
+    font-size: 15px;
+    color: black;
+    border: 1px solid green;
+    margin-right: 0.7em;
+    
+}
+.prb-liceu{
+    position: absolute;
+    text-decoration: none;
+    border: 1px solid green;
+    color: black;
+    padding: 10px;
+    left: 23%;
+    border-radius: 10px;
+
+}
+
+.prb-liceu:hover{
+    color: white;
+    background-color: green;
 }
