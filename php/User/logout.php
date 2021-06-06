@@ -5,4 +5,4 @@
     session_destroy();
 
     
-    header("Location: http://localhost/math/html/home.php");
+    header("Location: http://localhost/MeGa-Math-Equation-Game-/html/home.php");

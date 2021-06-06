@@ -14,9 +14,8 @@
                         <img src="../images/lgmath.png" alt="imgLogo">
                     </div>
                     <div class="topnav">
-                        <a href="home.html"><i class ="fa fa-hourglass-2">Probleme</i></a>
                         <a href="contact.html"><i class="fa fa-envelope-o">Contact</i></a>
-                        <a href="home.html"><i class="fa fa-home">Home</i></a>
+                        <a href="#" onclick="f1()" id="id-home"><i class="fa fa-home">Home</i></a>
                     </div>
                 </div>
                 <div class="left">
@@ -36,8 +35,8 @@
                                     <h3>Puncte</h3>
                                     <p>Pe baza exercitiilor la care vei raspunde corect, vei primi un anumit numar de puncte. Intrebarile vor fi de tip grila, cu 4 variante de raspuns, tu fiind nevoit sa o alegi pe cea corecta. Daca raspunsul tau este gresit, vei pierde un punct.</p>
                                 </div>
-                                <div class="../image-two">
-                                    <img src="images/verified.png" alt="imgVerify">
+                                <div class="image-two">
+                                    <img src="../images/verified.png" alt="imgVerify">
                                 </div> 
                             </li>
                             <li>
@@ -59,5 +58,16 @@
 					<div class="wave"></div>					
 				</div>
             </div>
+            <script>
+                function f1(){
+        console.log("a intrat");
+        if(sessionStorage.length){
+            document.getElementById("id-home").href="home-login.php";
+        }
+        else {
+            document.getElementById("id-home").href="home.php";
+        }
+    } 
+            </script>
         </body>
 </html>

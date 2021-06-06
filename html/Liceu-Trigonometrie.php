@@ -12,9 +12,8 @@
                 <img src="../images/lgmath.png" alt="Logo" />
             </div>
             <div class="topnav">
-                <a href="home.html"><i class="fa fa-hourglass-2">Probleme</i></a>
-                <a href="contact.html"><i class="fa fa-envelope-o">Contact</i></a>
-                <a href="home.html"><i class="fa fa-home">Home</i></a>
+                <a href="contact.php"><i class="fa fa-envelope-o">Contact</i></a>
+                <a href="#" onclick="f1()" id="id-home"><i class="fa fa-home">Home</i></a>
             </div>
         </div>
         <div class="left">
@@ -57,8 +56,17 @@
         <a href="../html/gimAlgebra.php" class="prb-liceu">Probleme gimnaziu</a>     
     </div>
     <script>
+    function f1(){
+        console.log("a intrat");
+        if(sessionStorage.length){
+            document.getElementById("id-home").href="home-login.php";
+        }
+        else {
+            document.getElementById("id-home").href="home.php";
+        }
+    }
 
-function z(parametru){
+    function z(parametru){
     var table = document.getElementsByClassName("tess");
     var inputs = document.getElementsByClassName("input-raspuns");
     var value = document.getElementById(parametru).value;

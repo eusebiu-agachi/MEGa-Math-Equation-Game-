@@ -16,15 +16,15 @@
                 </div>
                 <div class="meniu">
                     <div class="navbar">
-                        <a href="home.php"><i class="fa fa-home">Home</i></a>
-                        <a href="contact.html"><i class="fa fa-envelope-o">Contact</i></a>
+                        <a href="home-login.php"><i class="fa fa-home">Home</i></a>
+                        <a href="contact.php"><i class="fa fa-envelope-o">Contact</i></a>
                         <div class="dropdown">
                             <button class="dropbtn">
                                 <i class="fa fa-hourglass-2">Probleme</i>
                                 <i class="fa fa-caret-down"></i>
                             </button>
                             <div class="dropdown-content">
-                                <a href="prim.php">Scoala prima</a>
+                                <a href="prim.html">Scoala prima</a>
                                 <a href="gimAlgebra.php">Scoala gimnaziala</a>
                                 <a href="liceuAlgebra.php">Liceu</a>
                             </div>
@@ -40,7 +40,7 @@
                             <p class="salut" id="welcome">Test</p>
                             <p> Incepe sa rezolvi probleme<br> pentru a reusi sa obtii puncte!</p>
                             <p class="points"> Punctele tale: <i class="fa fa-star"><p id="model" class="points"></p></i></p>
-                            <a href="../php/User/logout.php" class="register" id="btn-register">Logout</a>
+                            <a href="../php/User/logout.php" class="register" id="btn-register" onclick="logout()">Logout</a>
                         </div>                              
                     </div>
                 </div>
@@ -88,7 +88,12 @@
         
         document.getElementById('model').innerHTML = score;
         document.getElementById('welcome').innerHTML = "Salut " + usr +"!";
-    
+        
+        function logout(){
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("userId");
+            sessionStorage.removeItem("score");        
+        }
     </script>
 </body>
 </html>

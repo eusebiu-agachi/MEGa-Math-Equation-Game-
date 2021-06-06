@@ -13,11 +13,10 @@
                   
                 </div>
                 <div class="topnav">
-					<img src="../images/lgmath.png" alt="Logo">
-					<a href="home.html"><i class="fa fa-hourglass-2">Probleme</i></a>
-                    <a href="contact.html"><i class="fa fa-envelope-o">Contact</i></a>
-                    <a href="home.html"><i class="fa fa-home">Home</i></a>
-				</div>
+					<img src="../images/lgmath.png" alt="Logo">                   
+                    <a href="contact.php"><i class="fa fa-envelope-o">Contact</i></a>
+                    <a href="#" onclick="f3()" id="id-home"><i class="fa fa-home">Home</i></a> 				
+                </div>
             </div>
             <div class="svg-up">
                 <svg width="510" height="510">
@@ -67,5 +66,16 @@
             </div>
         </div>
         <script src="script.js"></script>
+        <script>
+            function f3(){
+                console.log("a intrat");
+                if(sessionStorage.length){
+                    document.getElementById("id-home").href="home-login.php";
+                }
+                else {
+                    document.getElementById("id-home").href="home.php";
+                }
+            }
+        </script>
     </body>
 </html>

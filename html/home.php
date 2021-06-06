@@ -16,8 +16,8 @@
                 </div>
                 <div class="meniu">
                     <div class="navbar">
-                        <a href="home.html"><i class="fa fa-home">Home</i></a>
-                        <a href="contact.html"><i class="fa fa-envelope-o">Contact</i></a>
+                        <a href="home.php"><i class="fa fa-home">Home</i></a>
+                        <a href="contact.php"><i class="fa fa-envelope-o">Contact</i></a>
                         <div class="dropdown">
                             <button class="dropbtn">
                                 <i class="fa fa-hourglass-2">Probleme</i>
@@ -140,9 +140,11 @@
                         if(myObj.username !== "")
                             window.location.assign("home-login.php");
                     }
-                    
-                    document.getElementById('messageError').style.color="red";
-                    document.getElementById('messageError').innerHTML = "Cont inexistent sau parola gresita!"                               
+                    else{
+                        document.getElementById('messageError').style.color="red";
+                        document.getElementById('messageError').innerHTML = "Cont inexistent sau parola gresita!"   
+                    }
+                              
                        
                 }
                 xmlhttp.open("POST", "../php/User/login.php", true);
