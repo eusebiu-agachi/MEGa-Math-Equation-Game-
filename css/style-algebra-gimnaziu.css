@@ -9,6 +9,9 @@ body {
     background: #b5e48c;
 }
 
+.right{
+    margin-left: 0px;
+}
 .container {
     width: 100%;
     height: 160%;

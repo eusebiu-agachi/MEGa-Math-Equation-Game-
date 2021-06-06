@@ -9,6 +9,9 @@ body {
     background: radial-gradient(circle, rgba(141,246,107,1) 0%, rgba(224,240,109,1) 41%, rgba(156,231,120,1) 100%);
 }
 
+#userTable{
+    margin-top: 80px;
+}
 
 td:nth-child(even) {
     text-align: left;
@@ -233,7 +236,7 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
 
 .textbox {
     position: absolute;
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 23%;
     padding: 5px;
 }
@@ -713,7 +716,7 @@ tr:nth-child(even) {
         }
 
     .container .center .meniu .textbox {
-        margin-left: 0%;
+        margin-left: 30%;
     }
    
 }
@@ -778,8 +781,19 @@ tr:nth-child(even) {
     .container .center .meniu .textbox .register {
         font-size: 10px;
     }
+    #userTable{
+        margin-left: -20%;
+    }
+    .navbar{
+        left: -10%;
+        width: 130%;
+    }
 }
-
+@media screen and ( max-width: 720px){
+    #userTable{
+        margin-left: -25%;
+    }
+}
 @media screen and (max-width: 695px) {
     .container .set div img {
         max-width: 70px;
@@ -848,8 +862,11 @@ tr:nth-child(even) {
     .container .center .meniu .navbar {
         width: 170%;
         margin-left: -100px;
+        margin-top: 30px;
     }
-
+    #userTable{
+        margin-top: 80%;
+    }
         .container .center .meniu .navbar .textbox {
             margin-left: 100px;
             margin-top: 40px;
@@ -873,7 +890,7 @@ tr:nth-child(even) {
 
 @media screen and ( max-width: 440px) {
     .navbar {
-        margin-left: 50px;
+        margin-left: 80%;
     }
     .container .set div img {
         max-width: 40px;
@@ -895,9 +912,12 @@ tr:nth-child(even) {
     .text-log {
         top: 35%;
     }
+    #userTable{
+        margin-top: 120%;
+    }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 385px){
 
     .container .center .meniu .navbar .textbox {
         margin-left: 20px;
@@ -910,6 +930,10 @@ tr:nth-child(even) {
     }
     .navbar {
         margin-left: 50px;
+    }
+    #userTable{
+        margin-top: 120%;
+        margin-left: -30%;
     }
 }
 
@@ -950,10 +974,19 @@ tr:nth-child(even) {
 }
 
 @media screen and ( max-width: 360px) {
+    .navbar{
+        margin-top: 0px;
+    }
+    .navbar a{
+        margin-left: 20px;
+    }
     .container .set div img {
         max-width: 25px;
     }
-
+    #userTable{
+        margin-top: 120%;
+        margin-left: -36%;
+    }
     .text-log {
         margin-left: 20px;
     }
@@ -1094,6 +1127,9 @@ tr:nth-child(even) {
 
     .close-register {
         left: 95%;
+    }
+    .meniu .navbar{
+        margin-top: 20%;
     }
 }
 

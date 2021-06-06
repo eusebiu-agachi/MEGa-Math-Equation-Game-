@@ -15,6 +15,7 @@ class User{
     public $email;
     public $username;
     public $password;
+    public $repassword;
     public $score;
     public $score_prb;
     public $first_name;
@@ -47,6 +48,7 @@ class User{
 
         $stmt->execute();
         return $stmt;
+  
     }
 
     function register(){

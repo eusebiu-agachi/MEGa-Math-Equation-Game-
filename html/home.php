@@ -74,25 +74,25 @@
                         <div class="register-right">
                             <h1>Register</h1>
                             <img src="../images/close.png" alt="close" class="close-register">
-                            <form action="../php/User/register.php" method="POST" class="form-register">
+                            <div class="form-register">
                                 <div class="input">
                                     <i class="fa fa-user icon"></i>
-                                    <input type="text" name="username" class="inp" placeholder="Username">
+                                    <input type="text" name="username" class="inp" id="username-id" placeholder="Username">
                                 </div>
                                 <div class="input">
                                     <i class="fa fa-envelope icon"></i>
-                                    <input type="text" name="email" class="inp" placeholder="Email">
+                                    <input type="text" name="email" class="inp" id="email-id" placeholder="Email">
                                 </div>
                                 <div class="input">
                                     <i class="fa fa-key icon"></i>
-                                    <input type="password" name="password" class="inp" placeholder="Password">
+                                    <input type="password" name="password" class="inp" id="password" placeholder="Password">
                                 </div>
                                 <div class="input">
                                     <i class="fa fa-key icon"></i>
-                                    <input type="password" name="repassword" class="inp" placeholder="Confirm your password!">
+                                    <input type="password" name="repassword" class="inp" id="repassword" placeholder="Confirm your password!">
                                 </div>
-                                
-                                <input type="submit" name="submit" value="Register" class="sub-btn">
+                                <p id="messageRegisterError"></p> 
+                                <input type="submit" name="submit" value="Register" class="sub-btn" id="register">
                             </form>
                         </div>
                     </div>
@@ -125,7 +125,6 @@
     </div>
     <script src="../javascript/index.js"></script>
     <script type="text/javascript">
-
         var button = document.getElementById("log");
             button.addEventListener("click", function() {
                 var xmlhttp=new XMLHttpRequest();
@@ -137,15 +136,13 @@
                         sessionStorage.setItem("username",myObj.username);
                         sessionStorage.setItem("userId", myObj.id);
                         sessionStorage.setItem("score", myObj.score);
-                        if(myObj.username !== "")
+                        if(myObj.username !== "")                       
                             window.location.assign("home-login.php");
+                                         
                     }
                     else{
-                        document.getElementById('messageError').style.color="red";
-                        document.getElementById('messageError').innerHTML = "Cont inexistent sau parola gresita!"   
-                    }
-                              
-                       
+                            document.getElementById("messageError").innerHTML = "Cont inexistent sau parola incorecta!";
+                        }                                                                  
                 }
                 xmlhttp.open("POST", "../php/User/login.php", true);
                 var data = new FormData();
@@ -153,6 +150,37 @@
                 data.append('password', btoa(document.getElementById("psw-id").value));
                 xmlhttp.send(data);
         });
+
+        var buttonRegister = document.getElementById("register");
+        buttonRegister.addEventListener("click", function(){
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function (){
+                if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+                    var myObj = JSON.parse(this.responseText);
+                    if(myObj.status === true){
+                        document.getElementById("messageRegisterError").style.color = 'green';
+                        document.getElementById("messageRegisterError").innerHTML = myObj.message;
+                    }
+                        
+                    else if(myObj.message === "Parolele nu coincid"){
+                        document.getElementById("messageRegisterError").style.color = 'red';
+                        document.getElementById("messageRegisterError").innerHTML = myObj.message;
+                    }
+                    else {
+                        document.getElementById("messageRegisterError").style.color = 'red';
+                        document.getElementById("messageRegisterError").innerHTML = myObj.message;
+                    }
+                }
+                
+            }
+            xmlhttp.open("POST", "../php/User/register.php", true);
+            var data = new FormData();
+            data.append('username', document.getElementById("username-id").value);
+            data.append('email', document.getElementById("email-id").value);
+            data.append('password', btoa(document.getElementById("password").value));
+            data.append('repassword', btoa(document.getElementById("repassword").value));
+            xmlhttp.send(data);
+        })
     </script>
 </body>
 </html>
