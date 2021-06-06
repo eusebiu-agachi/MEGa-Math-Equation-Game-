@@ -25,8 +25,8 @@
                             </button>
                             <div class="dropdown-content">
                                 <a href="prim.html">Scoala prima</a>
-                                <a href="gimAlgebra.html">Scoala gimnaziala</a>
-                                <a href="liceuAlgebra.html">Liceu</a>
+                                <a href="gimAlgebra.php">Scoala gimnaziala</a>
+                                <a href="liceuAlgebra.php">Liceu</a>
                             </div>
                         </div>
                         <div class="search">

@@ -19,19 +19,19 @@
         </div>
         <div class="left">
             <div class="algebra">
-                <a href="gimAlgebra.html">Algebra</a>
+                <a href="gimAlgebra.php">Algebra</a>
                 <div class="text-algebra">
                     <img src="../images/algebra.png" alt="imgAlgebra">
                 </div>
             </div>
             <div class="geometrie">
-                <a href="gimGeometrie.html">Geometrie</a>
+                <a href="gimGeometrie.php">Geometrie</a>
                 <div class="text-geometrie">
                     <img src="../images/geometrie.png" alt="imgGeometrie">
                 </div>
             </div>
             <div class="trigonometrie">
-                <a href="gimTrigonometrie.html">Trigonometrie</a>
+                <a href="gimTrigonometrie.php">Trigonometrie</a>
                 <div class="text-algebra">
                     <img src="../images/trigonometrie.png" alt="imgTrigonometrie">
                 </div>
@@ -81,10 +81,14 @@
         xmlhttp.onreadystatechange = function(){
             if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
                 var myObj = JSON.parse(this.responseText);
-                alert(myObj.message);
-                check.style.display = 'block';
-                check.style.color='green'; 
-                
+                if(myObj.message === "Felicitari raspunsul este corect!"){
+                    check.style.display = 'block';
+                    check.style.color='green'; 
+                }
+                else if(myObj.message === "Raspunsul nu este corect!"){
+                    check.style.display = 'block';
+                    check.style.color='red';
+                }         
             }
 
         }

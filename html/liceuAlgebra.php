@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
     <title>Math Equation Game</title>
-	<link rel="stylesheet" href="../css/style-algebraLiceu.css">
+	<link rel="stylesheet" href="../css/style-algebraGimnaziu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -18,23 +18,24 @@
         </div>
         <div class="left">
             <div class="algebra">
-                <a href="liceuAlgebra.html">Algebra</a>
+                <a href="liceuAlgebra.php">Algebra</a>
                 <div class="text-algebra">
                     <img src="../images/algebra.png" alt="imgAlgebra">
                 </div>
             </div>
             <div class="analiza">
-                <a href="liceuAnaliza.html">Analiza</a>
+                <a href="liceuAnaliza.php">Analiza</a>
                 <div class="text-analiza">
                     <img src="../images/analiza.png" alt="imgAnaliza">
                 </div>
             </div>
             <div class="trigonometrie">
-                <a href="Liceu-Trigonometrie.html">Trigonometrie</a>
+                <a href="Liceu-Trigonometrie.php">Trigonometrie</a>
                 <div class="text-trigonometrie">
                     <img src="../images/trigonometrie.png" alt="imgTrigonometrie">
                 </div>
             </div>
+            <a href="../html/gimAlgebra.php" class="prb-liceu">Probleme gimnaziu</a>   
         </div>
         <div class="right">
         <table id="userTable" class="styled-table" border='1'>
@@ -52,8 +53,8 @@
                         echo showLiceuAlgebra();    
                 ?>            
         </table>
-        </div>  
-        <a href="../html/gimAlgebra.php" class="prb-liceu">Probleme gimnaziu</a>     
+        </div> 
+        
     </div>
     <script>
 
@@ -79,9 +80,14 @@ function z(parametru){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){
         if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
-            var myObj = JSON.parse(this.responseText);
-			alert(myObj.message);
-            check.style.color='green';
+            if(myObj.message === "Felicitari raspunsul este corect!"){
+                    check.style.display = 'block';
+                    check.style.color='green'; 
+                }
+            else if(myObj.message === "Raspunsul nu este corect!"){
+                check.style.display = 'block';
+                check.style.color='red';
+            }  
             
         }
 

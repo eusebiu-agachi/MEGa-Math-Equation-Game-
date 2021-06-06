@@ -6,13 +6,31 @@ include_once '../html/gimTrigonometrie.php';
 
 function showTrigonometrieGimnaziu(){
 
-$database = new Database();
-$db = $database->connect();
+    $database = new Database();
+    $db = $database->connect();
+    
+    $query = "SELECT * FROM trigonometrie_gimnaziu";
+    $result = $db->prepare($query);
+    $result->execute();
+
+    $result_per_page = 5;
+    $number_of_result = $result->rowCount();
+
+    $number_of_pages = ceil($number_of_result/$result_per_page);
+
+    if(!isset($_GET['page'])){
+        $page = 1;
+    }
+    else {
+        $page = $_GET['page'];
+    }
+
+   $this_page_first_result = ($page-1)*$result_per_page;
 
 
-$sql = "SELECT ID, title, text_problem, score FROM trigonometrie_gimnaziu";
-$result = $db->prepare($sql);
-$result->execute();
+    $sql = "SELECT ID, title, text_problem, score FROM trigonometrie_gimnaziu LIMIT " . $this_page_first_result .',' . $result_per_page;
+    $result = $db->prepare($sql);
+    $result->execute();
 
     if($result-> rowCount() > 0){
     while($row = $result->fetch(PDO::FETCH_ASSOC)){
@@ -32,5 +50,8 @@ $result->execute();
                 </td>
             </tr>";
         }
+    }
+    for($page = 1; $page <= $number_of_pages; $page++){
+        echo '<a href="../html/gimTrigonometrie.php?page=' .$page . '" class="pages">' .$page . '</a> ';
     }   
 } 
