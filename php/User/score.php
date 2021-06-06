@@ -18,8 +18,7 @@ if($result->rowCount() >0){
     while($row = $result->fetch(PDO::FETCH_ASSOC))
     {
         echo "<tr class='score-tr'><td>". $row["username"] ."</td><td>" . $row['score'] ."</td></tr> <br>";
-        
-        
+               
     }
 }
 

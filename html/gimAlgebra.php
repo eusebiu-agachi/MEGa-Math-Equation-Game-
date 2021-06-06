@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Math Equation Game</title>
-    <link rel="stylesheet" href="../css/style-gimnaziuAlgebra.css">
+    <link rel="stylesheet" href="../css/style-algebraGimnaziu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -58,5 +58,33 @@
          
         </div>
     </div>
+    <script>
+    function z(parametru){
+        var table = document.getElementsByClassName("tess");
+        var inputs = document.getElementsByClassName("input-raspuns");
+        var value = document.getElementById(parametru).value;
+        var valueID = document.getElementById(`custId-${parametru}`).value;
+        var check = document.getElementById(`check-${parametru}`);
+
+        console.log(parametru);
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+            if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+                var myObj = JSON.parse(this.responseText);
+                alert(myObj.message);
+
+                
+            }
+
+        }
+        xmlhttp.open("POST", "../php/User/verifyAlgebraGimnaziu.php", true);
+        var data = new FormData();
+        data.append('custId', valueID);
+        data.append('answear',value);
+        xmlhttp.send(data);
+       
+    }
+    </script>
 </body>
 </html>

@@ -678,7 +678,7 @@ tr:nth-child(even) {
 
 @media screen and (max-width: 1210px) {
     .container .center .meniu .textbox {
-        margin-left: 10%;
+        margin-left: 30%;
     }
 
     .container .center .meniu .logo img {
@@ -715,6 +715,7 @@ tr:nth-child(even) {
     .container .center .meniu .textbox {
         margin-left: 0%;
     }
+   
 }
 
 @media screen and (max-width: 990px) {
@@ -851,6 +852,10 @@ tr:nth-child(even) {
 
         .container .center .meniu .navbar .textbox {
             margin-left: 100px;
+            margin-top: 40px;
+        }
+        .container .center .meniu .navbar .textbox a {
+            margin-top: -30px;
         }
 
     .container .center .meniu .textbox p {
@@ -867,6 +872,9 @@ tr:nth-child(even) {
 }
 
 @media screen and ( max-width: 440px) {
+    .navbar {
+        margin-left: 50px;
+    }
     .container .set div img {
         max-width: 40px;
     }
@@ -889,42 +897,23 @@ tr:nth-child(even) {
     }
 }
 
-@media screen and (max-width: 408px) {
-    .container .set div img {
-        max-width: 35px;
-    }
-
-    .container .center .meniu .navbar {
-        width: 170%;
-        margin-left: -70px;
-    }
-
-        .container .center .meniu .navbar .textbox {
-            margin-left: 100px;
-        }
-
-    .container .meniu .search {
-        width: 100px;
-    }
-
-        .container .meniu .search input {
-            width: 70px;
-            margin-left: -1px;
-            height: 20px;
-        }
-
-        .container .meniu .search button {
-            width: 8px;
-            margin-right: 10px;
-            height: 5px;
-            margin-top: 2px;
-        }
+@media screen and (max-width: 380px){
 
     .container .center .meniu .navbar .textbox {
-        margin-top: 100px;
+        margin-left: 20px;
+    }
+    .container .center .meniu .navbar .textbox a {
+        margin-top: -25px;
+    }
+    .container .center .meniu .right table{
+        margin-top: 0px;
+    }
+    .navbar {
         margin-left: 50px;
     }
 }
+
+
 
 @media screen and ( max-width: 400px) {
     .login-left {
