@@ -107,6 +107,97 @@ class User{
         }
         else return false;      
     }
+
+	function alreadyResolvedTL(){
+        $query = "SELECT * FROM " . $this->table_pair_tl. " WHERE id_user='".$this->id."' AND id_problem='".$this->id_problem."'";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0){
+            return true;
+        }
+        else return false;      
+    }
+
+	 function insertPairTL(){
+        if($this->alreadyResolvedTL()){
+            return false;
+        }
+        $query = "INSERT INTO up_rel_trigonometriel
+    SET
+        id_user=:id, id_problem=:id_problem";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(":id", $this->id);
+        $stmt->bindParam(":id_problem", $this->id_problem);
+
+        
+        if($stmt->execute())
+            return true;
+        else
+            return false;
+    }
+
+	function insertPairAL(){
+        if($this->alreadyResolvedAL()){
+            return false;
+        }
+        $query = "INSERT INTO up_rel_algebral
+    SET
+        id_user=:id, id_problem=:id_problem";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(":id", $this->id);
+        $stmt->bindParam(":id_problem", $this->id_problem);
+
+        
+        if($stmt->execute())
+            return true;
+        else
+            return false;
+    }
+
+	function alreadyResolvedAL(){
+        $query = "SELECT * FROM " . $this->table_pair_al. " WHERE id_user='".$this->id."' AND id_problem='".$this->id_problem."'";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0){
+            return true;
+        }
+        else return false;      
+    }
+
+	function alreadyResolvedANL(){
+        $query = "SELECT * FROM " . $this->table_pair_anl. " WHERE id_user='".$this->id."' AND id_problem='".$this->id_problem."'";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0){
+            return true;
+        }
+        else return false;      
+    }
+
+	function insertPairANL(){
+        if($this->alreadyResolvedANL()){
+            return false;
+        }
+        $query = "INSERT INTO up_rel_analizal
+    SET
+        id_user=:id, id_problem=:id_problem";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(":id", $this->id);
+        $stmt->bindParam(":id_problem", $this->id_problem);
+
+        
+        if($stmt->execute())
+            return true;
+        else
+            return false;
+    }
+
     function verifyResponse(){
 
         $var = $this->score + $this->score_prb;

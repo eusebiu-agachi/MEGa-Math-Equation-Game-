@@ -61,8 +61,8 @@
 function z(parametru){
     var table = document.getElementsByClassName("tess");
     var inputs = document.getElementsByClassName("input-raspuns");
-    var s = document.getElementById(parametru).value;
-    var t = document.getElementById(`custId-${parametru}`).value;
+    var value = document.getElementById(parametru).value;
+    var valueId = document.getElementById(`custId-${parametru}`).value;
     var check = document.getElementById(`check-${parametru}`);
 
     console.log(parametru);
@@ -71,6 +71,7 @@ function z(parametru){
     xmlhttp.onreadystatechange = function(){
         if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
             var myObj = JSON.parse(this.responseText);
+			alert(myObj.message);
             check.style.color='green';
             
         }
@@ -78,8 +79,8 @@ function z(parametru){
     }
     xmlhttp.open("POST", "../php/User/verifyTrigonometrieLiceu.php", true);
     var data = new FormData();
-    data.append('custId', t);
-    data.append('tt',s);
+    data.append('custId', valueId);
+    data.append('answer',value);
     xmlhttp.send(data);
    
 }

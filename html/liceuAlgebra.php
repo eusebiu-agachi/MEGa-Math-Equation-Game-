@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="right">
-            <table id="userTable" class="styled-table" border='1'>
+        <table id="userTable" class="styled-table" border='1'>
                 <thread class="thread">
                     <tr class="tr">
                         <th>ID</th>
@@ -53,7 +53,37 @@
                         echo showLiceuAlgebra();    
                 ?>            
         </table>
-        </div>
+        </div>  
+        <a href="../html/gimAlgebra.php" class="prb-liceu">Probleme gimnaziu</a>     
     </div>
+    <script>
+
+function z(parametru){
+    var table = document.getElementsByClassName("tess");
+    var inputs = document.getElementsByClassName("input-raspuns");
+    var value = document.getElementById(parametru).value;
+    var valueId = document.getElementById(`custId-${parametru}`).value;
+    var check = document.getElementById(`check-${parametru}`);
+
+    console.log(parametru);
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+        if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+            var myObj = JSON.parse(this.responseText);
+			alert(myObj.message);
+            check.style.color='green';
+            
+        }
+
+    }
+    xmlhttp.open("POST", "../php/User/verifyAlgebraLiceu.php", true);
+    var data = new FormData();
+    data.append('custId', valueId);
+    data.append('answer',value);
+    xmlhttp.send(data);
+   
+}
+</script>
 </body>
 </html>
