@@ -86,7 +86,6 @@
         var elem = document.querySelector("#model");
         var newUsr = document.querySelector("#welcome");
         
-
         document.getElementById('model').innerHTML = score;
         document.getElementById('welcome').innerHTML = "Salut " + usr +"!";
     

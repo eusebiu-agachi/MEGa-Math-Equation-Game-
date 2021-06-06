@@ -97,6 +97,52 @@ class User{
         else
             return false;
     }
+    function insertPairGG(){
+        if($this->alreadyResolvedGG()){
+            return false;
+        }
+        $query = "INSERT INTO up_rel_geometrieg
+    SET
+        id_user=:id, id_problem=:id_problem";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(":id", $this->id);
+        $stmt->bindParam(":id_problem", $this->id_problem);
+
+        
+        if($stmt->execute())
+            return true;
+        else
+            return false;
+    }
+    function insertPairTG(){
+        if($this->alreadyResolvedTG()){
+            return false;
+        }
+        $query = "INSERT INTO up_rel_trigonometrieg
+    SET
+        id_user=:id, id_problem=:id_problem";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(":id", $this->id);
+        $stmt->bindParam(":id_problem", $this->id_problem);
+
+        
+        if($stmt->execute())
+            return true;
+        else
+            return false;
+    }
+     function alreadyResolvedTG(){
+        $query = "SELECT * FROM " . $this->table_pair_tg. " WHERE id_user='".$this->id."' AND id_problem='".$this->id_problem."'";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0){
+            return true;
+        }
+        else return false;      
+    }
     function alreadyResolved(){
         $query = "SELECT * FROM " . $this->table_pair . " WHERE id_user='".$this->id."' AND id_problem='".$this->id_problem."'";
         $stmt = $this->conn->prepare($query);
@@ -214,6 +260,16 @@ class User{
         }
         return false;
 
+    }
+    function alreadyResolvedGG(){
+        $query = "SELECT * FROM " . $this->table_pair_gg. " WHERE id_user='".$this->id."' AND id_problem='".$this->id_problem."'";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0){
+            return true;
+        }
+        else return false;      
     }
 
    

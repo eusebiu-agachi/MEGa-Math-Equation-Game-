@@ -57,5 +57,30 @@
             </table>   
         </div>
     </div>
+    <script>
+    function z(parametru){
+        var table = document.getElementsByClassName("tess");
+        var inputs = document.getElementsByClassName("input-raspuns");
+        var value = document.getElementById(parametru).value;
+        var valueID = document.getElementById(`custId-${parametru}`).value;
+        var check = document.getElementById(`check-${parametru}`);
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+            if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+                var myObj = JSON.parse(this.responseText);
+                alert(myObj.message);
+                check.style.color='green';               
+            }
+
+        }
+        xmlhttp.open("POST", "../php/User/verifyGeometrieGimnaziu.php", true);
+        var data = new FormData();
+        data.append('custId', valueID);
+        data.append('answear',value);
+        xmlhttp.send(data);
+    
+    }
+</script>
 </body>
 </html>

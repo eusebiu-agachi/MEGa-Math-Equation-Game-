@@ -27,7 +27,7 @@ $result->execute();
                     <input id='" . $row["ID"] . "' type='text' class='input-raspuns' name='tt' placeholder='Raspuns...'>
                     <input type='hidden' id='custId-". $row['ID'] ."' name='custId' value='" . $row['ID'] ."'>
                     <input name='function-submit' type='submit' onclick='z(" . $row['ID'] . ")'></i>
-                    <i class='fa fa-check-circle' id='check-". $row['ID'] ."' style='font-size:48px;color:red;'></i>
+                    <i class='fa fa-check-circle' id='check-". $row['ID'] ."' style='font-size:48px;color:red;display:none;'></i>
                 </div>
                 </td>
             </tr>";

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Math Equation Game</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -58,6 +57,7 @@
                             <div class="data">
                                 <input id="user-id" name="username" type="text" placeholder="Username" class="fa fa-user">
                                 <input id="psw-id" name="password" type="password" placeholder="Password">
+                                <p id="messageError"></p> 
                                 <button type="submit" id="log">Login</button>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                                     <i class="fa fa-key icon"></i>
                                     <input type="password" name="repassword" class="inp" placeholder="Confirm your password!">
                                 </div>
-                                <p id="messageError"></p> 
+                                
                                 <input type="submit" name="submit" value="Register" class="sub-btn">
                             </form>
                         </div>
@@ -140,10 +140,9 @@
                         if(myObj.username !== "")
                             window.location.assign("home-login.php");
                     }
-                    else{
-                        document.getElementById('messageError').style.color="red";
-                        document.getElementById('messageError').innerHTML = "Userername sau parola gresita!"
-                    }              
+                    
+                    document.getElementById('messageError').style.color="red";
+                    document.getElementById('messageError').innerHTML = "Cont inexistent sau parola gresita!"                               
                        
                 }
                 xmlhttp.open("POST", "../php/User/login.php", true);

@@ -73,7 +73,8 @@
             if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
                 var myObj = JSON.parse(this.responseText);
                 alert(myObj.message);
-
+                check.style.display = 'block';
+                check.style.color='green'; 
                 
             }
 
