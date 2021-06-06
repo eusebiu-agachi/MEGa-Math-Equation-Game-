@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>MEGa (Math Equation Game)</title>
+</head>
+
+<body prefix="schema: https://schema.org/" prefix="sa:https://ns.science.ai/" itemscope=""
+      itemtype="http://schema.org/WebPage">
+    <article typeof="schema:ScholarlyArticle">
+        <header>
+            <h1> MEGa (Math Equation Game) - User Guide </h1>
+        </header>
+        <h2>Table of contents</h2>
+        <ul>
+            <li>
+                <a href="#authors">Authors</a>
+            </li>
+            <li>
+                <a href="#introduction">1. Introduction</a>
+                <ul>
+                    <li><a href="#introduction-purpose">1.1 Purpose</a></li>
+                    <li><a href="#introduction-audience">1.2 Intended Audience and Reading Suggestions</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#guide">2. User Guide</a>
+            </li>
+        </ul>
+        <section id="authors" typeof="sa:AuthorsList">
+            <div role="contentinfo">
+                <h2>Authors</h2>
+                <ul>
+                    <li typeof="sa:ContribuitorRole" property="schema:author">
+                        <span typeof="sa:Person">
+                            <meta property="schema:givenName" content="Razvan" />
+                            <meta property="schema:familyName" content="Benchia" />
+                            <span property="schema:name"> Razvan Benchia </span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailTo:razvanbenchia9716@gmail.com" property="schema:email">razvanbenchia9716@gmail.com</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li typeof="sa:ContribuitorRole" property="schema:author">
+                        <span typeof="sa:Person">
+                            <meta property="schema:givenName" content="Eusebiu" />
+                            <meta property="schema:familyName" content="Agachi" />
+                            <span property="schema:name"> Eusebiu Agachi </span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailTo:agachi.eusebiu@yahoo.com" property="schema:email">agachi.eusebiu@yahoo.com</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li typeof="sa:ContribuitorRole" property="schema:author">
+                        <span typeof="sa:Person">
+                            <meta property="schema:givenName" content="Cristian" />
+                            <meta property="schema:familyName" content="Dobrovici" />
+                            <span property="schema:name"> Cristian Dobrovici </span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailTo:pllp24@yahoo.com" property="schema:email">pllp24@yahoo.com</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section typeof="sa:Abstract">
+            <div role="document">
+                <h2 id="introduction">1. Introduction</h2>
+                <h3 id="#introduction-purpose">1.1 Purpose</h3>
+                <p>
+                    The purpose of this document is to present in a clear and objective way the user's journey in the application. In other words, the document acts as a user manual for the application. The purpose of this guide is to cover (almost) all questions that may arise for the user.
+                </p>
+                <h3 id="#introduction-audience">1.2 Intended Audience and Reading Suggestions</h3>
+                <p>
+                    The document is addressed to both users and developers and testers. We consider it necessary to read this guide, in order to avoid any inconvenience regarding the time spent in the application. However, if there are inconveniences in the application, we recommend that you first look for the solution here.
+                </p>
+            </div>
+        </section>
+
+        <section typeof="sa:MaterialsAndMethods">
+            <div role="document">
+                <h2 id="#guide">2. User Guide</h2>
+                <p>
+                    When the user accesses the site intended for the application, it is greeted by the "Home" window.
+                </p>
+                <figure typeof="sa:image" id="user-interface-1">
+                    <img src="../images/home.png" style="width:700px;height:300px;" alt="navbar-screenshot" class="screenshots-nav" />
+                </figure>
+                <p>
+                    From here, the user has access to the login, registration and contact window. He can also access the proposed problems, by categories. If the user logs in, then the home window changes, the user's top appears, according to the score.
+                </p>
+                <figure typeof="sa:image" id="user-interface-2">
+                    <img src="../images/home2.png" style="width:700px;height:350px;" alt="navbar-screenshot" class="screenshots-nav" />
+                </figure>
+                <p>
+                    The other windows remain unchanged. The advantages of the user creating an account in the application, and solving problems while logged in, are:
+                </p>
+                <ul>
+                    <li>storing the score in the application</li>
+                    <li>appearance in the top</li>
+                </ul>
+                <p>
+                    If the user wants to log out, he must press the "Logout" button in the home window.
+                </p>
+                <p>
+                    From here, the user can select the category of problems from which he wants to solve.
+                </p>
+                <figure typeof="sa:image" id="user-interface-3">
+                    <img src="../images/home3.png" style="width:700px;height:350px;" alt="navbar-screenshot" class="screenshots-nav" />
+                </figure>
+                <p>
+                    The route here is divided into two cases:
+                </p>
+                <ol>
+                    <li>
+                        The user solves problems in the "gymnasium" or "high school" category (they are similar). Select for example the category "gymnasium", the level "algebra". If we want to solve a problem, then we enter the answer in the corresponding box, after which we press the "Send" button.
+                        <figure typeof="sa:image" id="user-interface-4">
+                            <img src="../images/home4.png" style="width:700px;height:350px;" alt="navbar-screenshot" class="screenshots-nav" />
+                        </figure>
+                        If the answer is wrong, then the user will be warned about this:
+                        <figure typeof="sa:image" id="user-interface-5">
+                            <img src="../images/home5.png" style="width:700px;height:350px;" alt="navbar-screenshot" class="screenshots-nav" />
+                        </figure>
+                        Otherwise, if the user's answer is correct, then he will be notified both by a pop-up and by the appearance of a green check mark in the interface. In addition, if the user is authenticated, the score assigned to that issue will add up to the user's current score.
+                        <figure typeof="sa:image" id="user-interface-6">
+                            <img src="../images/home6.png" style="width:700px;height:350px;" alt="navbar-screenshot" class="screenshots-nav" />
+                        </figure>
+                    </li>
+                    <li>
+                        ----------------------------
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+    </article>
+
+</body>
+</html>

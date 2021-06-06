@@ -10,7 +10,7 @@
       itemtype="http://schema.org/WebPage">
     <article typeof="schema:ScholarlyArticle">
         <header>
-            <h1> MEGa (Math Equation Game) </h1>
+            <h1> MEGa (Math Equation Game) - Main requirements </h1>
         </header>
         <h2>Table of contents</h2>
         <ul>
@@ -63,7 +63,6 @@
                 <ul>
                     <li><a href="#system-features-1">System Feature 1: Solving Math Problems</a></li>
                     <li><a href="#system-features-2">System Feature 2: Participation in the Top</a></li>
-                    <li><a href="#system-features-3">System Feature 3: Giving Hints</a></li>
                 </ul>
             </li>
             <li>
@@ -156,7 +155,7 @@
 
                 <h3 id="product-scope">1.4 Product Scope</h3>
                 <p>
-                    The aim for the user is to accumulate knowledge about different fields of mathematics (algebra, geometry, trigonometry, analysis), by age categories (primary, middle school, high school). The problems presented in the application are divided into modules - light, medium and a difficult problem, which requires addiotional research on the solution technique. The user has the possibility to buy hints in the application, in order to test their basic knowledge.
+                    The aim for the user is to accumulate knowledge about different fields of mathematics (algebra, geometry, trigonometry, analysis), by age categories (primary, middle school, high school). The problems presented in the application are divided into modules - light, medium and a difficult problem, which requires addiotional research on the solution technique.
                 </p>
 
                 <h3 id="product-references" typeof="sa:ReferenceList">1.5 References</h3>
@@ -233,7 +232,7 @@
 
                 <h3 id="constraints">2.5 Design and Implementation Constraints</h3>
                 <p>
-                    For the web application interface, Math Equation Game, we used only HTML5, CSS3 and JavaScript. Instead, to create the backend we will mainly use PHP. The developer is constrained by the fact that presenting problems to the client requires the use of the MathML utility. This utility contains certain "components" that do not display to customer information correctly, so little tricks have been used.
+                    For the web application interface, Math Equation Game, we used only HTML5, CSS3, JavaScript and Ajax. Instead, to create the backend we will mainly use PHP. The developer is constrained by the fact that presenting problems to the client requires the use of the MathML utility. This utility contains certain "components" that do not display to customer information correctly, so little tricks have been used.
 
                 </p>
 
@@ -262,6 +261,7 @@
                     <li>Register window</li>
                     <li>Contact window</li>
                     <li>Problem list window (separate window for each student category, respectively each category of mathematics field)</li>
+                    <li>The admin page, separate from the main site, to which the user does not have access. Only the site administrator can get here, who can add and delete problems.</li>
                 </ul>
                 <h4>3.1.1 Home Interface</h4>
                 <p>
@@ -310,7 +310,7 @@
 
                 <h4>3.1.6 Problem list Interface (for other categories)</h4>
                 <p>
-                    The image below is the pattern for the list of problems for middle school and high school. Each category described above also includes different categories of problems (algebra, analysis, geometry, trigonometry). Each area of mathematics comprises five problems - 2 easy, 2 medium and a difficult problem, which require additional research to understand the solving technique. The user has the choice of the field of mathematics in which he wants to solve the proposed problems. Also, to solve a problem, the user must enter the answer in the field intended for him, and after pressing the button next to the field. If the user wants to solve a problem, but does not yet have an idea to start, he can call the "Do you want a hint?" Button, through which he receives either the answer grid variants or an indication of how to solve it. Calling the button decreases a number of coins in the user's account.
+                    The image below is the pattern for the list of problems for middle school and high school. Each category described above also includes different categories of problems (algebra, analysis, geometry, trigonometry). Each area of mathematics comprises five problems - 2 easy, 2 medium and a difficult problem, which require additional research to understand the solving technique. The user has the choice of the field of mathematics in which he wants to solve the proposed problems. Also, to solve a problem, the user must enter the answer in the field intended for him, and after pressing the button next to the field.
                 </p>
                 <figure typeof="sa:image" id="user-interface-6">
                     <img src="../images/others.png" style="width:700px;height:300px;" alt="navbar-screenshot" class="screenshots-nav" />
@@ -322,11 +322,6 @@
                     <figure typeof="sa:image" id="user-interface-mobile1">
                         <img src="../images/mobile1.png" style="width:300px;height:600px;" alt="navbar-screenshot" class="screenshots-nav" />
                         <figcaption>Register Interface (for mobile)</figcaption>
-                    </figure>
-
-                    <figure typeof="sa:image" id="user-interface-mobile2">
-                        <img src="../images/mobile2.png" style="width:300px;height:600px;" alt="navbar-screenshot" class="screenshots-nav" />
-                        <figcaption>Problems List Interface (for mobile)</figcaption>
                     </figure>
 
                 <h3 id="software-interface">3.3 Software Interfaces</h3>
@@ -352,11 +347,6 @@
                 <h3 id="system-features-2">4.2 System Feature 2: Participation in the Top</h3>
                 <p>
                     This feature has a medium priority, because the top helps users to be recognized in the application, but they have no reward (both in the application and outside it). Ranking in a place as high as possible in the ranking highlights the user as being diligent and determined to understand the techniques for solving the problems described in the application.
-                </p>
-
-                <h3 id="system-features-3">4.3 System Feature 3: Giving Hints</h3>
-                <p>
-                    This feature has a medium priority, because, based on a fee (a number of coins awarded before), the user can receive one or more clues on how to solve the problem. Also, the user can choose the type of clue to obtain: grid variants or clue on the solving technique.
                 </p>
             </div>
         </section>
