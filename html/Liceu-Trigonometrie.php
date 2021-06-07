@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
 	<title>Math Equation Game</title>
-    <link rel="stylesheet" href="../css/style-algebra-gimnaziu.css">
+    <link rel="stylesheet" href="../css/style-gimnaziu-algebra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -30,28 +30,26 @@
                 </div>
             </div>
             <div class="trigonometrie">
-                <a href="Liceu-Trigonometrie.php">Trigonometrie</a>
+                <a href="Liceu-Trigonometrie.php">Geometrie liniara</a>
                 <div class="text-trigonometrie">
                     <img src="../images/trigonometrie.png" alt="imgTrigonometrie">
                 </div>
             </div> 
         </div>
         <div class="right">
-        <table id="userTable" class="styled-table" border='1'>
-                <thread class="thread">
-                    <tr class="tr">
-                        <th class="id">ID</th>
-                        <th class="title">Titlu</th>
-                        <th>Problema</th>
-                        <th class="score">Scor</th>
-                        <th>Raspuns</th>
-                    </tr>
-                </thread>
-                <tbody>
-                <?php include '../php/User/showTrigonometrieLiceu.php';
-                        echo showLiceuAnaliza();    
-                ?>            
-        </table>
+        <table id="userTable" class="styled-table">
+                <tr class="tr">
+                    <th class="id">ID</th>
+                    <th class="title">Titlu</th>
+                    <th>Problema</th>
+                    <th class="score">Scor</th>
+                     <th>Raspuns</th>
+                </tr>
+            <tbody>
+            <?php include '../php/User/showTrigonometrieLiceu.php';
+                    echo showLiceuAnaliza();    
+            ?>            
+            </table>
         </div> 
         <a href="../html/gimAlgebra.php" class="prb-liceu">Probleme gimnaziu</a> 
     </div>

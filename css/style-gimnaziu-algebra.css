@@ -60,6 +60,16 @@ body {
             font-family: 'Courier New', Courier, monospace;
         }
 
+        .container .left .analiza a {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 7px;
+            text-decoration: none;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
         .container .left .trigonometrie a {
             position: absolute;
             left: 50%;
@@ -81,6 +91,12 @@ body {
         }
 
         .container .left .algebra {
+            border: 1px solid black;
+            border-radius: 0px 27px 27px 27px;
+            box-shadow: -1px -1px 17px 0px rgba(0,0,0,0.75);
+        }
+
+        .container .left .analiza {
             border: 1px solid black;
             border-radius: 0px 27px 27px 27px;
             box-shadow: -1px -1px 17px 0px rgba(0,0,0,0.75);
@@ -455,6 +471,7 @@ body {
     }
 }
 table {
+    display: table;
     border-collapse: collapse;
     border-radius: 0.5em;
     overflow: hidden;

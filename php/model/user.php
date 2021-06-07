@@ -274,7 +274,29 @@ class User{
         }
         else return false;      
     }
+    function contact(){
+        $query = "INSERT INTO contact SET first_name=:first_name, last_name=:last_name, email=:email, subjects=:subjects, messages=:messages";
+        $stmt = $this->conn->prepare($query);
+        
+        $this->first_name=htmlspecialchars(strip_tags($this->first_name));
+        $this->last_name=htmlspecialchars(strip_tags($this->last_name));
+        $this->email=htmlspecialchars(strip_tags($this->email));
+        $this->subjects=htmlspecialchars(strip_tags($this->subjects));
+        $this->messages=htmlspecialchars(strip_tags($this->messages));
+        
 
+        $stmt->bindParam(":first_name", $this->first_name);
+        $stmt->bindParam(":last_name", $this->last_name);
+        $stmt->bindParam(":email", $this->email);
+        $stmt->bindParam(":subjects", $this->subjects);
+        $stmt->bindParam(":messages", $this->messages);
+
+        if($stmt->execute()){
+            $this->id = $this->conn->lastInsertId();
+            return true;
+        }
+        return false;
+    }
    
 
 }

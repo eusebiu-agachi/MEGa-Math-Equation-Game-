@@ -33,24 +33,23 @@
                             <form>
                                 <input type="text" id="text-id" placeholder="Cauta pe cineva..." name="search">
                                 <button type="submit"><i class="fa fa-search"></i></button>
+                                
                 
                             </form>
                         </div>
                         <div class="textbox" id="textbox">
                             <p class="salut" id="welcome"></p>
-                            <p> Incepe sa rezolvi probleme<br> pentru a reusi sa obtii puncte!</p>
-                            <p class="points"> Punctele tale: <i class="fa fa-star"><p id="model" class="points"></p></i></p>
+                            <p>Incepe sa rezolvi probleme<br> pentru a reusi sa obtii puncte!</p>
+                            <p class="points"> Punctele tale:<i class="fa fa-star"></i><p id="model" class="points">Points</p></p>
                             <a href="../php/User/logout.php" class="register" id="btn-register" onclick="logout()">Deconecteaza-te</a>
                         </div>                              
                     </div>
                 </div>
-                <table id="userTable" border='1'>
-                    <thread class="thread">
-                        <tr class="tr">
-                            <th>Username</th>
-                            <th>Score</th>
-                        </tr>
-                    </thread>
+                <table id="userTable">
+                    <tr class="tr">
+                        <th>Username</th>
+                        <th>Score</th>
+                    </tr>
                     <?php include '../php/User/score.php'?>
                 </table> 
                         

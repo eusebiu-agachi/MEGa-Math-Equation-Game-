@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Math Equation Game</title>
-    <link rel="stylesheet" href="../css/style-algebra-gimnaziu.css">
+    <link rel="stylesheet" href="../css/style-gimnaziu-algebra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -38,27 +38,26 @@
             </div>
            
         </div>
-        
         <div class="right">
-            <table id="userTable" class="styled-table" border='1'>
-                <thread class="thread">
-                    <tr class="tr">
-                        <th class="id">ID</th>
-                        <th class="title">Titlu</th>
-                        <th>Problema</th>
-                        <th class="score">Scor</th>
-                        <th>Raspuns</th>
-                    </tr>
-                </thread>
+            <table id="userTable" class="styled-table">               
+                <tr class="tr">
+                    <th class="id">ID</th>
+                    <th class="title">Titlu</th>
+                    <th>Problema</th>
+                    <th class="score">Scor</th>
+                    <th>Raspuns</th>
+                </tr>            
                 <tbody>
                 <?php include '../php/User/showGimAlgebraProblems.php';
-                        echo showAlgebraGimnaziu();    
-                ?>                       
+                    echo showAlgebraGimnaziu();    
+                ?>
+                </tbody>      
+            </table>                 
         </div>
+        <a href="../html/liceuAlgebra.php" class="prb-liceu">Probleme liceu</a>
     </div>
-    <a href="../html/liceuAlgebra.php" class="prb-liceu">Probleme liceu</a>
-    <script>
-        
+    
+    <script>       
     function f1(){
         console.log("a intrat");
         if(sessionStorage.length){

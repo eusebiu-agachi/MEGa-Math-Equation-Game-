@@ -41,31 +41,29 @@
                 </div>
                 <div class="contact-right">
                     <h1 class="title-contact">Contacteaza-ne</h1>
-                    <div class="line">
-
-                    </div>
-                    <form class="form-contact">
+                    <div class="line"></div>
+                    <div class="form-contact">
                         <div class="name-contact">
                             <div class="NM1">
-								<input type = "text" name = "name" placeholder = "Nume">
+								<input type = "text" name = "name" placeholder = "Nume" id="name">
 							</div>
                              <div class ="NM2">
-								<input type = "text" name = "name" placeholder = "Prenume">
+								<input type = "text" name = "lastname" placeholder = "Prenume" id="lastname">
 							</div>
 						</div>
                         <div class="rest-contact">
-                             <input type = "email" name="email" placeholder = "Email">
-                             <input type="text" name = "subject" placeholder = "Subiect">
-                             <input id="message" type="text" name = "message" placeholder="Mesaj..."> 
+                             <input type = "email" name="email" placeholder = "Email" id="email">
+                             <input type="text" name = "subject" placeholder = "Subiect" id="subject">
+                             <input id="message" type="text" name = "message" placeholder="Mesaj..." id="message"> 
                         </div>
+                        <p id="ok"></p>
                         <div class="send-contact">
-                            <input type="submit" value="Trimite">  
+                            <input type="submit" value="Trimite" id="send">  
                         </div>      
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="script.js"></script>
         <script>
             function f3(){
                 console.log("a intrat");
@@ -76,6 +74,25 @@
                     document.getElementById("id-home").href="home.php";
                 }
             }
+            var buttonSend = document.getElementById("send");
+            buttonSend.addEventListener("click", function(){
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function (){
+                if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+                    var myObj = JSON.parse(this.responseText);
+                    document.getElementById("ok").innerHTML = myObj.mess;        
+                }
+                
+            }
+            xmlhttp.open("POST", "../php/User/contact.php", true);
+            var data = new FormData();
+            data.append('name', document.getElementById("name").value);
+            data.append('lastname', document.getElementById("lastname").value);
+            data.append('email', document.getElementById("email").value);
+            data.append('subject', btoa(document.getElementById("subject").value));
+            data.append('message', btoa(document.getElementById("message").value));
+            xmlhttp.send(data);
+        })
         </script>
     </body>
 </html>

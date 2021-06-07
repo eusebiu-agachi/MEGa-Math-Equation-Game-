@@ -91,7 +91,7 @@
                                 </div>
                                 <p id="messageRegisterError"></p> 
                                 <input type="submit" name="submit" value="Register" class="sub-btn" id="register">
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
