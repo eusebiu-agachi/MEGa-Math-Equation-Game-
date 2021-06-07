@@ -36,10 +36,10 @@ function showLiceuAnaliza(){
     while($row = $result->fetch(PDO::FETCH_ASSOC)){
         echo
         "<tr>
-                <td>". $row["ID"] ."</td>
-                <td>" . $row["title"] ."</td>
+                <td class='id'>". $row["ID"] ."</td>
+                <td class='title'>" . $row["title"] ."</td>
                 <td>" . $row["text_problem"] . "</td>
-                <td>" . $row["score"] ."</td>
+                <td class='score'>" . $row["score"] ."</td>
                 <td class='tess'>
                 <div>
                     <input id='" . $row["ID"] . "' type='text' class='input-raspuns' name='tt' placeholder='Raspuns...'>

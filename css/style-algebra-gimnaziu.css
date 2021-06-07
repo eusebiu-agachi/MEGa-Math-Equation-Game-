@@ -14,7 +14,7 @@ body {
 }
 .container {
     width: 100%;
-    height: 160%;
+    height: 140%;
     position: absolute;
 }
 
@@ -179,17 +179,11 @@ body {
 }
 
 
-.container .right .problem .cerinta {
+.cerinta{
     position: relative;
     margin-left: 10%;
     margin-top: 0;
     padding: 20px;
-}
-
-.container .right .problem .raspuns {
-    position: relative;
-    top: 0px;
-    left: 300px;
 }
 
     .container .right .problem .raspuns .btn-send {
@@ -268,11 +262,30 @@ body {
         }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     .container #right{
         margin-left: 0px;
     }
+    table{
+        position: relative;
+        margin-left: -40%;
+       
+    }
+
 }
+@media screen and (max-width: 510px){
+    .styledProblems{
+        overflow-x: auto;
+    }
+}
+@media screen and (max-width: 680px){
+    #userTable .id, .title, .score{
+        display: none;
+        display: none;
+    }
+}
+
+   
 @media screen and (max-width: 830px) {
     .container .right {
         margin-top: 150px;
@@ -322,6 +335,7 @@ body {
         width: 450px;
         height: 225px;
     }
+
 }
 
 
@@ -384,6 +398,7 @@ body {
     .container .meniu .logo {
         display: none;
     }
+
 }
 
 @media screen and (max-width:440px) {
@@ -443,7 +458,7 @@ table {
     border-collapse: collapse;
     border-radius: 0.5em;
     overflow: hidden;
-    width: 90%;
+    width: 110%;
     
   }
 .tr{
@@ -477,7 +492,8 @@ table {
     border: 1px solid green;
     color: black;
     padding: 10px;
-    left: 23%;
+    left: 70%;
+    top: 49%;
     border-radius: 10px;
 
 }

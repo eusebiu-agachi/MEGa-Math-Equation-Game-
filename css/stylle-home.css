@@ -41,12 +41,6 @@ section .set {
             max-width: 150px;
         }
 
-        /*
-animate 18s : viteza cu care sa mearga: e mai mica, merge mai repede;
-linear infinite: sa cada incontinuu, daca nu scriem linear infinite, cade, se opreste si dupa ce vin toate porneste iar;
-animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
-				  daca e cu minus cat mai mare, porneste de la mijloc ;
-*/
         section .set div:nth-child(1) {
             left: 1%;
             animation: animate 15s linear infinite;
@@ -331,12 +325,13 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
         position: relative;
         font-size: 30px;
         font-family: 'Times New Roman', Times, serif;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .popup-register .profile-text-second {
         text-align: center;
         position: relative;
+        margin-top: 30%;
         font-size: 30px;
         font-family: 'Times New Roman', Times, serif;
     }
@@ -359,14 +354,14 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     .popup-register .already-account {
         position: relative;
         left: 20px;
-        top: 80px;
+        top: 140px;
         font-size: 20px;
     }
 
     .popup-register .left-login {
         position: relative;
         left: 67%;
-        top: 9%;
+        top: 22%;
         width: 50px;
         height: 50px;
         font-size: 20px;
@@ -440,10 +435,10 @@ animation-delay:  daca e cu plus, se orpeste 10 sec si dupa porneste
     border: 1px solid #248D22;
     position: relative;
     top: 100%;
-    left: 33%;
+    left: 22%;
     padding: 8px;
     font-size: 20px;
-    width: 100px;
+    width: 150px;
     border-radius: 20px;
     cursor: pointer;
     outline: none;

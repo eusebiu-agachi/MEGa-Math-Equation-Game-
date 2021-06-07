@@ -14,7 +14,7 @@
             </div>
             <div class="topnav">
                 <a href="contact.php"><i class="fa fa-envelope-o">Contact</i></a>
-                <a href="#" onclick="f1()" id="id-home"><i class="fa fa-home">Home</i></a>
+                <a href="#" onclick="f1()" id="id-home"><i class="fa fa-home">Acasa</i></a>
             </div>
         </div>
         <div class="left">
@@ -36,16 +36,17 @@
                     <img src="../images/trigonometrie.png" alt="imgTrigonometrie">
                 </div>
             </div>
-            <a href="../html/liceuAlgebra.php" class="prb-liceu">Probleme liceu</a>
+           
         </div>
+        
         <div class="right">
             <table id="userTable" class="styled-table" border='1'>
                 <thread class="thread">
                     <tr class="tr">
-                        <th>ID</th>
-                        <th>Title</th>
+                        <th class="id">ID</th>
+                        <th class="title">Titlu</th>
                         <th>Problema</th>
-                        <th>Score</th>
+                        <th class="score">Scor</th>
                         <th>Raspuns</th>
                     </tr>
                 </thread>
@@ -53,10 +54,9 @@
                 <?php include '../php/User/showGimAlgebraProblems.php';
                         echo showAlgebraGimnaziu();    
                 ?>                       
-            </table>
-         
         </div>
     </div>
+    <a href="../html/liceuAlgebra.php" class="prb-liceu">Probleme liceu</a>
     <script>
         
     function f1(){
@@ -88,7 +88,10 @@
                 else if(myObj.message === "Raspunsul nu este corect!"){
                     check.style.display = 'block';
                     check.style.color='red';
-                }         
+                }
+                else{
+                    alert("Ai raspuns deja la aceasta problema!");
+                }      
             }
 
         }

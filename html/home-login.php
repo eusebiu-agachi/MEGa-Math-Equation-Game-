@@ -16,7 +16,7 @@
                 </div>
                 <div class="meniu">
                     <div class="navbar">
-                        <a href="home-login.php"><i class="fa fa-home">Home</i></a>
+                        <a href="home-login.php"><i class="fa fa-home">Acasa</i></a>
                         <a href="contact.php"><i class="fa fa-envelope-o">Contact</i></a>
                         <div class="dropdown">
                             <button class="dropbtn">
@@ -31,16 +31,16 @@
                         </div>
                         <div class="search">
                             <form>
-                                <input type="text" id="text-id" placeholder="Search.." name="search">
+                                <input type="text" id="text-id" placeholder="Cauta pe cineva..." name="search">
                                 <button type="submit"><i class="fa fa-search"></i></button>
                 
                             </form>
                         </div>
                         <div class="textbox" id="textbox">
-                            <p class="salut" id="welcome">Test</p>
+                            <p class="salut" id="welcome"></p>
                             <p> Incepe sa rezolvi probleme<br> pentru a reusi sa obtii puncte!</p>
                             <p class="points"> Punctele tale: <i class="fa fa-star"><p id="model" class="points"></p></i></p>
-                            <a href="../php/User/logout.php" class="register" id="btn-register" onclick="logout()">Logout</a>
+                            <a href="../php/User/logout.php" class="register" id="btn-register" onclick="logout()">Deconecteaza-te</a>
                         </div>                              
                     </div>
                 </div>

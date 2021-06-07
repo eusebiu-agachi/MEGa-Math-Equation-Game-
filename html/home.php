@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="ro">
 <head>
-    <link rel="stylesheet" href="../css/style-home.css" type="text/css">
+    <link rel="stylesheet" href="../css/stylle-home.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="meniu">
                     <div class="navbar">
-                        <a href="home.php"><i class="fa fa-home">Home</i></a>
+                        <a href="home.php"><i class="fa fa-home">Acasa</i></a>
                         <a href="contact.php"><i class="fa fa-envelope-o">Contact</i></a>
                         <div class="dropdown">
                             <button class="dropbtn">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="search">
                             <form>
-                                <input type="text" id="text-id" placeholder="Search.." name="search">
+                                <input type="text" id="text-id" placeholder="Cauta pe cineva..." name="search">
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
@@ -40,16 +40,16 @@
                         </div>
                         <div class="textbox">
                             <p> Esti pregatit sa exersezi?</p>
-                            <button class="login" id="btn-login">Login</button>
-                            <button class="register" id="btn-register">Register</button>
+                            <button class="login" id="btn-login">Autentifica-te</button>
+                            <button class="register" id="btn-register">Inregistreaza-te</button>
                         </div>
                     </div>
                     <div class="popup animate">
                         <div class="login-left">
                             <p class="text-log">Logheaza-te pentru mai multe beneficii!</p>
                             <img src="../images/img-login.png" class="log-login" alt="Login Image">
-                            <p class="welcome">Welcome</p>
-                            <p class="account-box">You don't have account?</p>
+                            <p class="welcome">Salutare!</p>
+                            <p class="account-box">Nu ai un cont?</p>
                             <button class="left-register" id="left-register"><i class="fa fa-key"></i></button>
                         </div>
                         <div class="login-right">
@@ -58,17 +58,15 @@
                                 <input id="user-id" name="username" type="text" placeholder="Username" class="fa fa-user">
                                 <input id="psw-id" name="password" type="password" placeholder="Password">
                                 <p id="messageError"></p> 
-                                <button type="submit" id="log">Login</button>
+                                <button type="submit" id="log">Autentifica-te</button>
                             </div>
                         </div>
                     </div>
                     <div class="popup-register animate">
                         <div class="register-left">
-                            <h1 class="profile-text"> Choose you profile </h1>
-                            <h1 class="profile-text-second">photo</h1>
-                            <img src="../images/picture-profil.png" class="img-profil" alt="Profil image">
-                            <input type="file" id="file" name="upload-file" class="input-left">
-                            <p class="already-account">You have already an account?</p>
+                            <h1 class="profile-text"> Bine ai venit! </h1>
+                            <h1 class="profile-text-second">Completeaza informatiile pentru a te inregistra!</h1>                           
+                            <p class="already-account">Ai deja un cont?</p>
                             <button class="left-login" id="left-login"><i class="fa fa-key"></i></button>
                         </div>
                         <div class="register-right">

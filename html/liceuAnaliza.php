@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
 	<title>Math Equation Game</title>
-    <link rel="stylesheet" href="../css/style-algebraGimnaziu.css">
+    <link rel="stylesheet" href="../css/style-algebra-gimnaziu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -41,10 +41,10 @@
         <table id="userTable" class="styled-table" border='1'>
                 <thread class="thread">
                     <tr class="tr">
-                        <th>ID</th>
-                        <th>Title</th>
+                        <th class="id">ID</th>
+                        <th class="title">Titlu</th>
                         <th>Problema</th>
-                        <th>Score</th>
+                        <th class="score">Scor</th>
                         <th>Raspuns</th>
                     </tr>
                 </thread>
@@ -54,8 +54,10 @@
                 ?>            
         </table>
         </div>
+        <a href="../html/gimAlgebra.php" class="prb-liceu">Probleme gimnaziu</a> 
+    </div>
         <script>
-
+    
      function f1(){
         console.log("a intrat");
         if(sessionStorage.length){

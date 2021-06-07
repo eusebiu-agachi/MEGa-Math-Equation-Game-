@@ -15,7 +15,7 @@
                 <div class="topnav">
 					<img src="../images/lgmath.png" alt="Logo">                   
                     <a href="contact.php"><i class="fa fa-envelope-o">Contact</i></a>
-                    <a href="#" onclick="f3()" id="id-home"><i class="fa fa-home">Home</i></a> 				
+                    <a href="#" onclick="f3()" id="id-home"><i class="fa fa-home">Acasa</i></a> 				
                 </div>
             </div>
             <div class="svg-up">
@@ -40,26 +40,26 @@
                    </nav>
                 </div>
                 <div class="contact-right">
-                    <h1 class="title-contact">Contact us</h1>
+                    <h1 class="title-contact">Contacteaza-ne</h1>
                     <div class="line">
 
                     </div>
                     <form class="form-contact">
                         <div class="name-contact">
                             <div class="NM1">
-								<input type = "text" name = "name" placeholder = "First Name">
+								<input type = "text" name = "name" placeholder = "Nume">
 							</div>
                              <div class ="NM2">
-								<input type = "text" name = "name" placeholder = "Last Name">
+								<input type = "text" name = "name" placeholder = "Prenume">
 							</div>
 						</div>
                         <div class="rest-contact">
                              <input type = "email" name="email" placeholder = "Email">
-                             <input type="text" name = "subject" placeholder = "Subject">
-                             <input id="message" type="text" name = "message" placeholder="Message..."> 
+                             <input type="text" name = "subject" placeholder = "Subiect">
+                             <input id="message" type="text" name = "message" placeholder="Mesaj..."> 
                         </div>
                         <div class="send-contact">
-                            <input type="submit" value="Send">  
+                            <input type="submit" value="Trimite">  
                         </div>      
                     </form>
                 </div>

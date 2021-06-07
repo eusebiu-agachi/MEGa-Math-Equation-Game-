@@ -42,7 +42,7 @@ class User{
     }
 
     function login(){
-        
+
         $query = "SELECT ID, username, score FROM " . $this->table_name . "  WHERE username='".$this->username."' AND password='".$this->password."'";
         $stmt = $this->conn->prepare($query);
 
@@ -263,6 +263,7 @@ class User{
         return false;
 
     }
+
     function alreadyResolvedGG(){
         $query = "SELECT * FROM " . $this->table_pair_gg. " WHERE id_user='".$this->id."' AND id_problem='".$this->id_problem."'";
         $stmt = $this->conn->prepare($query);
