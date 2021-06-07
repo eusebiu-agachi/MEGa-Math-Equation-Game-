@@ -1,7 +1,7 @@
 <?php
 
-include_once '../admin.php';
-include_once '../database.php';
+include_once '../admin/admin.php';
+include_once '../php/database.php';
 
 
 

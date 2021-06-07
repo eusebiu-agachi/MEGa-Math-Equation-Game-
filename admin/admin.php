@@ -27,7 +27,7 @@ class Admin{
         $stmt->bindParam(":title", $this->title);
         $stmt->bindParam(":text_problem", $this->text_problem);
         $stmt->bindParam(":score", $this->score);
-        stmt->bindParam(":answear", $this->answear);
+        $stmt->bindParam(":answear", $this->answear);
 
         if($stmt->execute()){
             return true;
