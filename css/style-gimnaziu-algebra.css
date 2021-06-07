@@ -229,6 +229,17 @@ body {
     }
 }
 
+@media screen and (max-width: 1080px){
+    .pages{
+        position: relative;
+        margin-top: 100%;
+
+    }
+    .prb-liceu{
+        position: absolute;
+        margin-top: 200px;
+    }
+}
 @media screen and (max-width: 1064px) {
     .meniu {
         display: block;
@@ -510,7 +521,7 @@ table {
     color: black;
     padding: 10px;
     left: 70%;
-    top: 49%;
+    top: 52%;
     border-radius: 10px;
 
 }
